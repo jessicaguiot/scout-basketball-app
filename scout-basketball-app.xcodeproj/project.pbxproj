@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C097BA0CAE35B55E1AC04125 /* Pods_scout_basketball_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DB8A69AFF856F90918C482 /* Pods_scout_basketball_appTests.framework */; };
+		D23D1D92302313CD2F64CE5B /* Pods_scout_basketball_app_scout_basketball_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21755E7180F0629C6D5EF8F0 /* Pods_scout_basketball_app_scout_basketball_appUITests.framework */; };
+		D6A7C53E539E0616E37E4234 /* Pods_scout_basketball_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EA08D9394E4BE100085E28 /* Pods_scout_basketball_app.framework */; };
 		D8299B7325CD6E6700DC8B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299B7225CD6E6700DC8B3B /* AppDelegate.swift */; };
 		D8299B7525CD6E6700DC8B3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299B7425CD6E6700DC8B3B /* SceneDelegate.swift */; };
-		D8299B7725CD6E6700DC8B3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299B7625CD6E6700DC8B3B /* ViewController.swift */; };
-		D8299B7A25CD6E6700DC8B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8299B7825CD6E6700DC8B3B /* Main.storyboard */; };
 		D8299B7D25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8299B7B25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld */; };
 		D8299B7F25CD6E6800DC8B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8299B7E25CD6E6800DC8B3B /* Assets.xcassets */; };
 		D8299B8225CD6E6800DC8B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8299B8025CD6E6800DC8B3B /* LaunchScreen.storyboard */; };
 		D8299B8D25CD6E6800DC8B3B /* scout_basketball_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299B8C25CD6E6800DC8B3B /* scout_basketball_appTests.swift */; };
 		D8299B9825CD6E6800DC8B3B /* scout_basketball_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299B9725CD6E6800DC8B3B /* scout_basketball_appUITests.swift */; };
+		D8299BB525CD6FFA00DC8B3B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BB425CD6FFA00DC8B3B /* Coordinator.swift */; };
+		D8299BBA25CD704200DC8B3B /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BB925CD704200DC8B3B /* ViewCode.swift */; };
+		D8299BC525CD717C00DC8B3B /* NBBMatchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BC425CD717C00DC8B3B /* NBBMatchesCoordinator.swift */; };
+		D8299BCA25CD71C300DC8B3B /* NBBMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BC925CD71C300DC8B3B /* NBBMatchesViewController.swift */; };
+		D8299BCF25CD724100DC8B3B /* NBBMatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BCE25CD724100DC8B3B /* NBBMatchesViewModel.swift */; };
+		D8299BD425CD73B500DC8B3B /* NBBMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BD325CD73B500DC8B3B /* NBBMatchesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1657DF23291EE05A3AE11485 /* Pods-scout-basketball-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-appTests.release.xcconfig"; path = "Target Support Files/Pods-scout-basketball-appTests/Pods-scout-basketball-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		21755E7180F0629C6D5EF8F0 /* Pods_scout_basketball_app_scout_basketball_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scout_basketball_app_scout_basketball_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B2147347837AB71904A41E /* Pods-scout-basketball-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-app.debug.xcconfig"; path = "Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app.debug.xcconfig"; sourceTree = "<group>"; };
+		670E44E24509EFD8207ECE59 /* Pods-scout-basketball-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-appTests.debug.xcconfig"; path = "Target Support Files/Pods-scout-basketball-appTests/Pods-scout-basketball-appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79EA08D9394E4BE100085E28 /* Pods_scout_basketball_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scout_basketball_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9664C022F8BA719A6C90E65 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig"; path = "Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests/Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA46F394C083206209D3FCBF /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig"; path = "Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests/Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2DB8A69AFF856F90918C482 /* Pods_scout_basketball_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scout_basketball_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8299B6F25CD6E6700DC8B3B /* scout-basketball-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scout-basketball-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8299B7225CD6E6700DC8B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8299B7425CD6E6700DC8B3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8299B7625CD6E6700DC8B3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D8299B7925CD6E6700DC8B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8299B7C25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = scout_basketball_app.xcdatamodel; sourceTree = "<group>"; };
 		D8299B7E25CD6E6800DC8B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8299B8125CD6E6800DC8B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +64,13 @@
 		D8299B9325CD6E6800DC8B3B /* scout-basketball-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "scout-basketball-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8299B9725CD6E6800DC8B3B /* scout_basketball_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scout_basketball_appUITests.swift; sourceTree = "<group>"; };
 		D8299B9925CD6E6800DC8B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8299BB425CD6FFA00DC8B3B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D8299BB925CD704200DC8B3B /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		D8299BC425CD717C00DC8B3B /* NBBMatchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesCoordinator.swift; sourceTree = "<group>"; };
+		D8299BC925CD71C300DC8B3B /* NBBMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesViewController.swift; sourceTree = "<group>"; };
+		D8299BCE25CD724100DC8B3B /* NBBMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesViewModel.swift; sourceTree = "<group>"; };
+		D8299BD325CD73B500DC8B3B /* NBBMatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesView.swift; sourceTree = "<group>"; };
+		E64A137A2A896505CF90072C /* Pods-scout-basketball-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-app.release.xcconfig"; path = "Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A7C53E539E0616E37E4234 /* Pods_scout_basketball_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C097BA0CAE35B55E1AC04125 /* Pods_scout_basketball_appTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23D1D92302313CD2F64CE5B /* Pods_scout_basketball_app_scout_basketball_appUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0369EED7C91B642CBBFACC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79EA08D9394E4BE100085E28 /* Pods_scout_basketball_app.framework */,
+				21755E7180F0629C6D5EF8F0 /* Pods_scout_basketball_app_scout_basketball_appUITests.framework */,
+				D2DB8A69AFF856F90918C482 /* Pods_scout_basketball_appTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE81EB55ADD5EBA661985D13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43B2147347837AB71904A41E /* Pods-scout-basketball-app.debug.xcconfig */,
+				E64A137A2A896505CF90072C /* Pods-scout-basketball-app.release.xcconfig */,
+				AA46F394C083206209D3FCBF /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */,
+				A9664C022F8BA719A6C90E65 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */,
+				670E44E24509EFD8207ECE59 /* Pods-scout-basketball-appTests.debug.xcconfig */,
+				1657DF23291EE05A3AE11485 /* Pods-scout-basketball-appTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D8299B6625CD6E6700DC8B3B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +131,8 @@
 				D8299B8B25CD6E6800DC8B3B /* scout-basketball-appTests */,
 				D8299B9625CD6E6800DC8B3B /* scout-basketball-appUITests */,
 				D8299B7025CD6E6700DC8B3B /* Products */,
+				AE81EB55ADD5EBA661985D13 /* Pods */,
+				A0369EED7C91B642CBBFACC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +149,9 @@
 		D8299B7125CD6E6700DC8B3B /* scout-basketball-app */ = {
 			isa = PBXGroup;
 			children = (
-				D8299B7225CD6E6700DC8B3B /* AppDelegate.swift */,
-				D8299B7425CD6E6700DC8B3B /* SceneDelegate.swift */,
-				D8299B7625CD6E6700DC8B3B /* ViewController.swift */,
-				D8299B7825CD6E6700DC8B3B /* Main.storyboard */,
+				D8299BAD25CD6F2300DC8B3B /* Protocols */,
+				D8299BAC25CD6F1700DC8B3B /* Configuration */,
+				D8299BAB25CD6EF100DC8B3B /* Scenes */,
 				D8299B7E25CD6E6800DC8B3B /* Assets.xcassets */,
 				D8299B8025CD6E6800DC8B3B /* LaunchScreen.storyboard */,
 				D8299B8325CD6E6800DC8B3B /* Info.plist */,
@@ -131,6 +178,83 @@
 			path = "scout-basketball-appUITests";
 			sourceTree = "<group>";
 		};
+		D8299BAB25CD6EF100DC8B3B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BBE25CD70E500DC8B3B /* NBBMatches  */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D8299BAC25CD6F1700DC8B3B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D8299B7425CD6E6700DC8B3B /* SceneDelegate.swift */,
+				D8299B7225CD6E6700DC8B3B /* AppDelegate.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		D8299BAD25CD6F2300DC8B3B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BB425CD6FFA00DC8B3B /* Coordinator.swift */,
+				D8299BB925CD704200DC8B3B /* ViewCode.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D8299BBE25CD70E500DC8B3B /* NBBMatches  */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BC325CD716200DC8B3B /* Coordinator */,
+				D8299BC225CD713000DC8B3B /* Model */,
+				D8299BC125CD712500DC8B3B /* Controller */,
+				D8299BC025CD711A00DC8B3B /* ViewModel */,
+				D8299BBF25CD711100DC8B3B /* View */,
+			);
+			path = "NBBMatches ";
+			sourceTree = "<group>";
+		};
+		D8299BBF25CD711100DC8B3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BD325CD73B500DC8B3B /* NBBMatchesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8299BC025CD711A00DC8B3B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BCE25CD724100DC8B3B /* NBBMatchesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D8299BC125CD712500DC8B3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BC925CD71C300DC8B3B /* NBBMatchesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8299BC225CD713000DC8B3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8299BC325CD716200DC8B3B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BC425CD717C00DC8B3B /* NBBMatchesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +262,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8299B9C25CD6E6800DC8B3B /* Build configuration list for PBXNativeTarget "scout-basketball-app" */;
 			buildPhases = (
+				52A01FEA8C5B920DA537CE4F /* [CP] Check Pods Manifest.lock */,
 				D8299B6B25CD6E6700DC8B3B /* Sources */,
 				D8299B6C25CD6E6700DC8B3B /* Frameworks */,
 				D8299B6D25CD6E6700DC8B3B /* Resources */,
@@ -155,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8299B9F25CD6E6800DC8B3B /* Build configuration list for PBXNativeTarget "scout-basketball-appTests" */;
 			buildPhases = (
+				19EFEEC14E6885DD3369AE3C /* [CP] Check Pods Manifest.lock */,
 				D8299B8425CD6E6800DC8B3B /* Sources */,
 				D8299B8525CD6E6800DC8B3B /* Frameworks */,
 				D8299B8625CD6E6800DC8B3B /* Resources */,
@@ -173,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8299BA225CD6E6800DC8B3B /* Build configuration list for PBXNativeTarget "scout-basketball-appUITests" */;
 			buildPhases = (
+				4FE6CC1AF049DA8D72D3D708 /* [CP] Check Pods Manifest.lock */,
 				D8299B8F25CD6E6800DC8B3B /* Sources */,
 				D8299B9025CD6E6800DC8B3B /* Frameworks */,
 				D8299B9125CD6E6800DC8B3B /* Resources */,
@@ -236,7 +363,6 @@
 			files = (
 				D8299B8225CD6E6800DC8B3B /* LaunchScreen.storyboard in Resources */,
 				D8299B7F25CD6E6800DC8B3B /* Assets.xcassets in Resources */,
-				D8299B7A25CD6E6700DC8B3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +382,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19EFEEC14E6885DD3369AE3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scout-basketball-appTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FE6CC1AF049DA8D72D3D708 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scout-basketball-app-scout-basketball-appUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52A01FEA8C5B920DA537CE4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scout-basketball-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8299B6B25CD6E6700DC8B3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8299B7725CD6E6700DC8B3B /* ViewController.swift in Sources */,
+				D8299BB525CD6FFA00DC8B3B /* Coordinator.swift in Sources */,
+				D8299BCA25CD71C300DC8B3B /* NBBMatchesViewController.swift in Sources */,
+				D8299BBA25CD704200DC8B3B /* ViewCode.swift in Sources */,
 				D8299B7D25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld in Sources */,
 				D8299B7325CD6E6700DC8B3B /* AppDelegate.swift in Sources */,
 				D8299B7525CD6E6700DC8B3B /* SceneDelegate.swift in Sources */,
+				D8299BC525CD717C00DC8B3B /* NBBMatchesCoordinator.swift in Sources */,
+				D8299BCF25CD724100DC8B3B /* NBBMatchesViewModel.swift in Sources */,
+				D8299BD425CD73B500DC8B3B /* NBBMatchesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D8299B7825CD6E6700DC8B3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8299B7925CD6E6700DC8B3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D8299B8025CD6E6800DC8B3B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,6 +629,7 @@
 		};
 		D8299B9D25CD6E6800DC8B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B2147347837AB71904A41E /* Pods-scout-basketball-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +649,7 @@
 		};
 		D8299B9E25CD6E6800DC8B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E64A137A2A896505CF90072C /* Pods-scout-basketball-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +669,7 @@
 		};
 		D8299BA025CD6E6800DC8B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 670E44E24509EFD8207ECE59 /* Pods-scout-basketball-appTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +692,7 @@
 		};
 		D8299BA125CD6E6800DC8B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1657DF23291EE05A3AE11485 /* Pods-scout-basketball-appTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +715,7 @@
 		};
 		D8299BA325CD6E6800DC8B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA46F394C083206209D3FCBF /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +736,7 @@
 		};
 		D8299BA425CD6E6800DC8B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9664C022F8BA719A6C90E65 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_scout_basketball_appTests {
+  umbrella header "Pods-scout-basketball-appTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

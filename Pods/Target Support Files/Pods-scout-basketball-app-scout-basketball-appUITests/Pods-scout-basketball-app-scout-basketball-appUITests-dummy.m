@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_scout_basketball_app_scout_basketball_appUITests : NSObject
+@end
+@implementation PodsDummy_Pods_scout_basketball_app_scout_basketball_appUITests
+@end
