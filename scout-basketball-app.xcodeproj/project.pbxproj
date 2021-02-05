@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,8 @@
 		D8299BCA25CD71C300DC8B3B /* NBBMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BC925CD71C300DC8B3B /* NBBMatchesViewController.swift */; };
 		D8299BCF25CD724100DC8B3B /* NBBMatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BCE25CD724100DC8B3B /* NBBMatchesViewModel.swift */; };
 		D8299BD425CD73B500DC8B3B /* NBBMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BD325CD73B500DC8B3B /* NBBMatchesView.swift */; };
+		D8299BDF25CD7A9100DC8B3B /* NBBMatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BDE25CD7A9100DC8B3B /* NBBMatchesTableViewCell.swift */; };
+		D8299BEC25CD86AD00DC8B3B /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BEB25CD86AD00DC8B3B /* NetworkingClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		D8299BC925CD71C300DC8B3B /* NBBMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesViewController.swift; sourceTree = "<group>"; };
 		D8299BCE25CD724100DC8B3B /* NBBMatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesViewModel.swift; sourceTree = "<group>"; };
 		D8299BD325CD73B500DC8B3B /* NBBMatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesView.swift; sourceTree = "<group>"; };
+		D8299BDE25CD7A9100DC8B3B /* NBBMatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBBMatchesTableViewCell.swift; sourceTree = "<group>"; };
+		D8299BEB25CD86AD00DC8B3B /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 		E64A137A2A896505CF90072C /* Pods-scout-basketball-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-app.release.xcconfig"; path = "Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +153,7 @@
 		D8299B7125CD6E6700DC8B3B /* scout-basketball-app */ = {
 			isa = PBXGroup;
 			children = (
+				D8299BEA25CD868400DC8B3B /* Network */,
 				D8299BAD25CD6F2300DC8B3B /* Protocols */,
 				D8299BAC25CD6F1700DC8B3B /* Configuration */,
 				D8299BAB25CD6EF100DC8B3B /* Scenes */,
@@ -220,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				D8299BD325CD73B500DC8B3B /* NBBMatchesView.swift */,
+				D8299BDE25CD7A9100DC8B3B /* NBBMatchesTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +261,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		D8299BEA25CD868400DC8B3B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D8299BEB25CD86AD00DC8B3B /* NetworkingClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +280,7 @@
 				D8299B6B25CD6E6700DC8B3B /* Sources */,
 				D8299B6C25CD6E6700DC8B3B /* Frameworks */,
 				D8299B6D25CD6E6700DC8B3B /* Resources */,
+				5DD69F48338201857023131E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,6 +318,7 @@
 				D8299B8F25CD6E6800DC8B3B /* Sources */,
 				D8299B9025CD6E6800DC8B3B /* Frameworks */,
 				D8299B9125CD6E6800DC8B3B /* Resources */,
+				58F3DF44C71F1CBBDC9EEF3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -449,6 +465,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		58F3DF44C71F1CBBDC9EEF3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests/Pods-scout-basketball-app-scout-basketball-appUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests/Pods-scout-basketball-app-scout-basketball-appUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests/Pods-scout-basketball-app-scout-basketball-appUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DD69F48338201857023131E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -457,11 +507,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8299BB525CD6FFA00DC8B3B /* Coordinator.swift in Sources */,
+				D8299BEC25CD86AD00DC8B3B /* NetworkingClient.swift in Sources */,
 				D8299BCA25CD71C300DC8B3B /* NBBMatchesViewController.swift in Sources */,
 				D8299BBA25CD704200DC8B3B /* ViewCode.swift in Sources */,
 				D8299B7D25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld in Sources */,
 				D8299B7325CD6E6700DC8B3B /* AppDelegate.swift in Sources */,
 				D8299B7525CD6E6700DC8B3B /* SceneDelegate.swift in Sources */,
+				D8299BDF25CD7A9100DC8B3B /* NBBMatchesTableViewCell.swift in Sources */,
 				D8299BC525CD717C00DC8B3B /* NBBMatchesCoordinator.swift in Sources */,
 				D8299BCF25CD724100DC8B3B /* NBBMatchesViewModel.swift in Sources */,
 				D8299BD425CD73B500DC8B3B /* NBBMatchesView.swift in Sources */,

@@ -7,19 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01BA1627A90D8BB93FB75DD3C759E0F8 /* Pods-scout-basketball-app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9E0F00A915BA5944B44573FEF2831 /* Pods-scout-basketball-app-dummy.m */; };
-		0E8ABC4480322263B2EDA0505BCEFE7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		18A2CF5C4A1179D472C59600BCB1E02B /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C46CC726F8682E1971E284CD7AA933 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		663804A83EC5AAE2B4F24A49C777B9EF /* Pods-scout-basketball-appTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14CDCFC0E232D2F8D527E76C32ED825B /* Pods-scout-basketball-appTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7007974E91DFBEAC22A07B55D1BFCDB8 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D68221083261B792FF1058828A6E100 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m */; };
-		A2FC7033F53A3B664A233BD2EB4C1F9E /* Pods-scout-basketball-appTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6786948CE93853D465AEDA0C341A2DF5 /* Pods-scout-basketball-appTests-dummy.m */; };
-		D1848CFD933101048CA67F9FE9AD6D73 /* Pods-scout-basketball-app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 706653544DD380B3938C68CCE4B3B912 /* Pods-scout-basketball-app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E65B000B1566F68C91E8D50C80CBCAAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		FAB48D00CC6E4F9D71DFE41EA213C005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		013BAC24F7AC722E59517CB110A9E685 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */; };
+		0A1849775CF90D514963187D3A771CF8 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBFC4256A48F45E26B860D38479E52 /* Combine.swift */; };
+		0A900DF17E3B64F08AF673E9A0DDD697 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F4F5D5DA538F51C4D4F27C9F64377 /* OperationQueue+Alamofire.swift */; };
+		0E8ABC4480322263B2EDA0505BCEFE7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		0F393F93FE42FD24FDE8BD478214A5A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		1208E81DA8B532D0646D627B50290EB6 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B2325F6647FEE3C9209201FF5D4C2 /* AFError.swift */; };
+		19D605A3233499828FB6B790869F3E9C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */; };
+		212EDC48B68107BEA9247F3464CE696E /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51515830AB9FE94E01DF6F48146153 /* StringEncoding+Alamofire.swift */; };
+		218C14EAE5AA31C30314AE0289B732A0 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D45A2AF061C99B2355F19EC47243D9 /* Protected.swift */; };
+		27E59A11A2743B0595CDE3A08675EAE1 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABD9F54297FF27309F1F8A34F99417C /* DispatchQueue+Alamofire.swift */; };
+		381FF05F8B4F611EE9C2FDBE4457BB89 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */; };
+		3BB6629FE5ADA3E59702A1B400A90235 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8341D5B5C36B95D3F02E834C7BD33247 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B8CC1C61E7A0BB28CFA8CE7C12FEBC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */; };
+		476D5F33E25386C60D6BD75C4FA97C67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		47FDBBBD2704901588C3A7C56BBC502D /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */; };
+		4AEC050FA7D5ED52FDA9DF50EA3560DF /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26220434118FCFC30E4850800AC3068 /* ParameterEncoder.swift */; };
+		6546D728B69398F93B506845141EBD61 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC45C560942C5BCAB401419728808D3 /* EventMonitor.swift */; };
+		663804A83EC5AAE2B4F24A49C777B9EF /* Pods-scout-basketball-appTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 686DCF80D3FB2FFFD9537C61861A51AB /* Pods-scout-basketball-appTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		666EC5C8356E6D4448A2FE7BEE77AD88 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB40D0E4136A2EBA646F9A9D0DA652 /* RedirectHandler.swift */; };
+		66B26C6CAE737EC21F4BA1F1851B69C5 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CB7AF23C7E1475678C8CCC286CF41 /* Result+Alamofire.swift */; };
+		6AE407A4FB6C3D6ADD862CC6E3067A17 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */; };
+		6C08F6A77889651626583100F560153D /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8687B00F57762F34D3282826817C5 /* RequestTaskMap.swift */; };
+		6E54F64E8DA73F4B0B46C216F9F93F63 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1741D7ACD43E5D0E9DBE557F396581 /* RequestInterceptor.swift */; };
+		72EC2712926E6D28B52360D9AC41668F /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43DFB0A067881554C0CF2E83093E1D6 /* AlamofireExtended.swift */; };
+		7D3DD4A8BB36733BA15868F7FB8C56CE /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 845043F6DD76EF451A61A8C4EEB3BF6C /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AA937910F87915DE700CAB6C868689E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBC286A9BAE2611EFC71F7C9FB60B8 /* Notifications.swift */; };
+		8FE05F87C31ABD67EA24B06DDE752F35 /* Pods-scout-basketball-app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D73BF6AE8253B0E602872FB9FB48F /* Pods-scout-basketball-app-dummy.m */; };
+		911448B2EDA2FF880108F77642797A88 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197951AB8559109A9F40B71A85C843E /* ResponseSerialization.swift */; };
+		91B837CE0DCD8EDB300FCDFFA1279162 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DAB6EC98A071AAD9A29C41818F346 /* HTTPHeaders.swift */; };
+		93EF1A2390B5A8AA68C23963910C1702 /* Pods-scout-basketball-app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0B3C5517F629593912B098D1C8310F /* Pods-scout-basketball-app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B1D8A7798D8A6F518FC9AF9725431D0 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC350EEADBAF761D20138C94C4A0086 /* URLConvertible+URLRequestConvertible.swift */; };
+		9EE26F9E838E52B50743F69BDCFA6189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		9FED70D1E1FBFB80E974E999EF732258 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C44EFF4AE1CC95C361F6A007EDBD6E7 /* RetryPolicy.swift */; };
+		A2FC7033F53A3B664A233BD2EB4C1F9E /* Pods-scout-basketball-appTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 144428301923017E24F659102D06C786 /* Pods-scout-basketball-appTests-dummy.m */; };
+		A9C7B29D4878F1690BBE3F8195CF0313 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */; };
+		ABA85887A41495358C83CE3F3030EDEA /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D233027C8491F55B2473FCDA12389 /* CachedResponseHandler.swift */; };
+		C1C5B050B55C15103ABC81769551A283 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F2B77F50C8E86FDD27C5A573013C07 /* Response.swift */; };
+		C1F1DB6A9CBDE584D09BA1613AAD4F9D /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF4837C47DFB74B73C8B82A591E94C /* Alamofire.swift */; };
+		C6D5A4B4028B2C43380C9FA58BD5C8CA /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC11D87B8E53578044EA373E7DE6642 /* Alamofire-dummy.m */; };
+		D03F1F02DE8606E6057D57866611BEBF /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB5063650D66E661FD979273F90078 /* MultipartUpload.swift */; };
+		D14066FAE94E304798E43651E5886D13 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998E57E5CB536D68D4A97BC1B56E62B8 /* ParameterEncoding.swift */; };
+		D31FC7FDD450C4CDD633ECBAD27C6221 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F2B90B6F80D8F30747B3E178F5528F /* URLEncodedFormEncoder.swift */; };
+		D54C287A45F8E79ECD403C41E666A399 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8D6AA180793A182B9DC35598A81D2 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m */; };
+		D5EAAFB6FAD77A8F0699345149BA3CBB /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C7841BFC1EEBD8A094A3CA60AEADA /* URLRequest+Alamofire.swift */; };
+		DC627AFC5B585686898B014184AFCABD /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA36ADD8B0E94CE139C28448821E13 /* AuthenticationInterceptor.swift */; };
+		EDC93BD7B9262119AE145E4C7A9D0212 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B14ACFFB6A91762B582B46A3466A3F /* Request.swift */; };
+		F0F3224FF592F9BA2A044A2FC2BD4CCD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20097F794E1A1791AB97EBE230264E61 /* Validation.swift */; };
+		F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970C386BD824FE4AD000560950399556 /* URLSessionConfiguration+Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A87B69E3B1C70BD8A79496678464D8F4 /* PBXContainerItemProxy */ = {
+		4FBC814BC3E6A5987BD66E3E88488651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		59BF9AA1947FB6AF1F687B83BDB8860A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		CD66D5089BECAA49C246C531910C9A0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -29,43 +82,106 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		030E89CF4F2D44788FADABAD90A68D16 /* Pods-scout-basketball-app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scout-basketball-app-acknowledgements.markdown"; sourceTree = "<group>"; };
-		068DA2DE883B9D6108EE74F419663F36 /* Pods-scout-basketball-appTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-appTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		07E827C19AB69003515EC12755CF64FE /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		14CDCFC0E232D2F8D527E76C32ED825B /* Pods-scout-basketball-appTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scout-basketball-appTests-umbrella.h"; sourceTree = "<group>"; };
-		1D68221083261B792FF1058828A6E100 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m"; sourceTree = "<group>"; };
-		230B226436885B25E8487430D1B516DF /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		062C7841BFC1EEBD8A094A3CA60AEADA /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
+		0A35F01B3E4D10452CBBC63A032D7E55 /* Pods-scout-basketball-app-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-scout-basketball-app-frameworks.sh"; sourceTree = "<group>"; };
+		0AA6AF79EF346D967D767A2A51A15725 /* Pods-scout-basketball-app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-acknowledgements.plist"; sourceTree = "<group>"; };
+		0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		0EC45C560942C5BCAB401419728808D3 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
+		144428301923017E24F659102D06C786 /* Pods-scout-basketball-appTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scout-basketball-appTests-dummy.m"; sourceTree = "<group>"; };
+		20097F794E1A1791AB97EBE230264E61 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		2224386EB3999568028EE33FA818EE1A /* Pods-scout-basketball-appTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-appTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		29B14345EE3C30F0FDF9D12BC329189A /* Pods_scout_basketball_app_scout_basketball_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_scout_basketball_app_scout_basketball_appUITests.framework; path = "Pods-scout-basketball-app-scout-basketball-appUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30231920E59649537DAF1B3D9467423C /* Pods-scout-basketball-appTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scout-basketball-appTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4182B5BDA12CACA3203DA01C15A37834 /* Pods-scout-basketball-app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-acknowledgements.plist"; sourceTree = "<group>"; };
-		41D9E0F00A915BA5944B44573FEF2831 /* Pods-scout-basketball-app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scout-basketball-app-dummy.m"; sourceTree = "<group>"; };
-		4AFCFF39B71D6F363065658E89DB66A4 /* Pods-scout-basketball-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		29EBC286A9BAE2611EFC71F7C9FB60B8 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		2A0B3C5517F629593912B098D1C8310F /* Pods-scout-basketball-app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scout-basketball-app-umbrella.h"; sourceTree = "<group>"; };
+		2AB4D35BAA5B817969CC8D825A2CBF35 /* Pods-scout-basketball-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app.debug.xcconfig"; sourceTree = "<group>"; };
+		2B0F05A3DBDE8E8AD6A8511F035D63D3 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		2FA897D43160B2CE23242DD62BE5650A /* Pods-scout-basketball-app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-Info.plist"; sourceTree = "<group>"; };
+		333DAB6EC98A071AAD9A29C41818F346 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		349B2325F6647FEE3C9209201FF5D4C2 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		34A388E975C66C41D137307D4F72037B /* Pods-scout-basketball-appTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-appTests-Info.plist"; sourceTree = "<group>"; };
+		385F2B0E0ABA3D730257E1409BB224EC /* Pods-scout-basketball-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E299277738705D080BAE089F4B7D2D9 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig"; sourceTree = "<group>"; };
+		401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
+		4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
+		48CCF7D46F46816A26B71652435774C4 /* Pods-scout-basketball-appTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scout-basketball-appTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4A3D73BF6AE8253B0E602872FB9FB48F /* Pods-scout-basketball-app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scout-basketball-app-dummy.m"; sourceTree = "<group>"; };
+		4ABD9F54297FF27309F1F8A34F99417C /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		4C3BE8851F705D905F2C3EC73AF809C1 /* Pods_scout_basketball_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_scout_basketball_appTests.framework; path = "Pods-scout-basketball-appTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52C46CC726F8682E1971E284CD7AA933 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h"; sourceTree = "<group>"; };
-		6786948CE93853D465AEDA0C341A2DF5 /* Pods-scout-basketball-appTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scout-basketball-appTests-dummy.m"; sourceTree = "<group>"; };
-		6E1EE0F35F7D6CE2B1E520A09DF3EEEE /* Pods-scout-basketball-app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-Info.plist"; sourceTree = "<group>"; };
-		706653544DD380B3938C68CCE4B3B912 /* Pods-scout-basketball-app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scout-basketball-app-umbrella.h"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		75223FA1178252BB9BAC67ADFF44C22A /* Pods-scout-basketball-appTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-scout-basketball-appTests.modulemap"; sourceTree = "<group>"; };
-		75FD293ECD2094F2CE1D347D2E723E0B /* Pods-scout-basketball-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-appTests.debug.xcconfig"; sourceTree = "<group>"; };
-		76F8629C6639E28CC83953D8C01B11CC /* Pods-scout-basketball-app-scout-basketball-appUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-scout-basketball-appUITests-Info.plist"; sourceTree = "<group>"; };
-		7C6B4AD43C0C94198F49EC2CBAF27361 /* Pods-scout-basketball-app-scout-basketball-appUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-scout-basketball-app-scout-basketball-appUITests.modulemap"; sourceTree = "<group>"; };
+		4D3E0E1E34DD4394C6023B622C262222 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
+		51BB5063650D66E661FD979273F90078 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
+		51D45A2AF061C99B2355F19EC47243D9 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
+		5A51515830AB9FE94E01DF6F48146153 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
+		5BEF4837C47DFB74B73C8B82A591E94C /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61F2B90B6F80D8F30747B3E178F5528F /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
+		673CB7AF23C7E1475678C8CCC286CF41 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
+		686DCF80D3FB2FFFD9537C61861A51AB /* Pods-scout-basketball-appTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scout-basketball-appTests-umbrella.h"; sourceTree = "<group>"; };
+		7197951AB8559109A9F40B71A85C843E /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		79BFAE4F0928F95479DE70C637654FC5 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		79EB40D0E4136A2EBA646F9A9D0DA652 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
+		8341D5B5C36B95D3F02E834C7BD33247 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h"; sourceTree = "<group>"; };
+		845043F6DD76EF451A61A8C4EEB3BF6C /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		84B14ACFFB6A91762B582B46A3466A3F /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		876F4F5D5DA538F51C4D4F27C9F64377 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		88E5AEF1EFA40BFD3DABC24C2E44B10F /* Pods-scout-basketball-app-scout-basketball-appUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-scout-basketball-app-scout-basketball-appUITests-frameworks.sh"; sourceTree = "<group>"; };
+		8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		8E89E1283AEC70DAC72D0B280303BE88 /* Pods-scout-basketball-app-scout-basketball-appUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-scout-basketball-appUITests-Info.plist"; sourceTree = "<group>"; };
+		8FD2C68CA442804DA7F6192E1BAEF529 /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		94C8D6AA180793A182B9DC35598A81D2 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m"; sourceTree = "<group>"; };
+		970C386BD824FE4AD000560950399556 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		998E57E5CB536D68D4A97BC1B56E62B8 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		9C1741D7ACD43E5D0E9DBE557F396581 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
+		9C44EFF4AE1CC95C361F6A007EDBD6E7 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
+		9C8BB4EB9C53097B4D96CDD5ED1745C7 /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E38C38A1A1EF4773C97846A257B6C70 /* Pods-scout-basketball-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app.debug.xcconfig"; sourceTree = "<group>"; };
-		A97814B166F3429E157618C1A40892A3 /* Pods-scout-basketball-app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-scout-basketball-app.modulemap"; sourceTree = "<group>"; };
-		B897336EA5635A6736018D0CBF1E7151 /* Pods-scout-basketball-appTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-appTests-Info.plist"; sourceTree = "<group>"; };
+		A4153404C4C0A47E701390CEDAB4A093 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
+		A6F2B77F50C8E86FDD27C5A573013C07 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		A96DE8FD14699EF9E77FCAEAA63249DF /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AFB91070B5849C508A1084A004347199 /* Pods-scout-basketball-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app.release.xcconfig"; sourceTree = "<group>"; };
+		B0EBFC4256A48F45E26B860D38479E52 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
+		B4B8687B00F57762F34D3282826817C5 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
+		B5DA36ADD8B0E94CE139C28448821E13 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
 		BAA1516E101D58ADE70C2BF4DA81A682 /* Pods_scout_basketball_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_scout_basketball_app.framework; path = "Pods-scout-basketball-app.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1A204523A412BEB115D9E7462B0A9DB /* Pods-scout-basketball-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app.release.xcconfig"; sourceTree = "<group>"; };
-		D3A4CBEB9A0868FE1E4730541C7B7D20 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EE49B8BD0AB34B5F53855A188E9460B5 /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BACBA02F1289D527B2B97B7F7A25E64A /* Pods-scout-basketball-app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-scout-basketball-app.modulemap"; sourceTree = "<group>"; };
+		BCC350EEADBAF761D20138C94C4A0086 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		C1F3C9FE71E8FC658746B3998AAE5ECA /* Pods-scout-basketball-appTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-scout-basketball-appTests.modulemap"; sourceTree = "<group>"; };
+		D26220434118FCFC30E4850800AC3068 /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
+		DA4D233027C8491F55B2473FCDA12389 /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
+		DF095EE747FF637D1AE0CC8E7F12E205 /* Pods-scout-basketball-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-scout-basketball-appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFC11D87B8E53578044EA373E7DE6642 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		E2468D7246E8A9756A99DC475AB9557C /* Pods-scout-basketball-app-scout-basketball-appUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-scout-basketball-app-scout-basketball-appUITests.modulemap"; sourceTree = "<group>"; };
+		F0186423495B826CFF7B2D2734546D3F /* Pods-scout-basketball-app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-scout-basketball-app-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F43DFB0A067881554C0CF2E83093E1D6 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
+		F71BBCEF1586B8C48F6C090283FD70AA /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E668FCF1B7FA4FDEA1A37F9FD09341F6 /* Frameworks */ = {
+		04CA851A603A1A5E2CCFC0CDB26137AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB48D00CC6E4F9D71DFE41EA213C005 /* Foundation.framework in Frameworks */,
+				0F393F93FE42FD24FDE8BD478214A5A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		620F655A52614BF451DDA27BB6D5D856 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EE26F9E838E52B50743F69BDCFA6189 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9590D3FE7A79CD7CBEE3F346E8C19D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9C7B29D4878F1690BBE3F8195CF0313 /* CFNetwork.framework in Frameworks */,
+				476D5F33E25386C60D6BD75C4FA97C67 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,20 +193,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBFA878E01A046243D7FF7981271BC9E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E65B000B1566F68C91E8D50C80CBCAAB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35681CE5E4DF0021818E506D8D433B24 /* Products */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D22154A1C2249EFFC748EC5524C5F9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				BAA1516E101D58ADE70C2BF4DA81A682 /* Pods_scout_basketball_app.framework */,
 				29B14345EE3C30F0FDF9D12BC329189A /* Pods_scout_basketball_app_scout_basketball_appUITests.framework */,
 				4C3BE8851F705D905F2C3EC73AF809C1 /* Pods_scout_basketball_appTests.framework */,
@@ -98,98 +215,177 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E905EE511FDD48E60D2EF04D38DCEFB /* Pods-scout-basketball-appTests */ = {
+		5A6F22EC0F5633257B85B6E660A2165F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				75223FA1178252BB9BAC67ADFF44C22A /* Pods-scout-basketball-appTests.modulemap */,
-				30231920E59649537DAF1B3D9467423C /* Pods-scout-basketball-appTests-acknowledgements.markdown */,
-				068DA2DE883B9D6108EE74F419663F36 /* Pods-scout-basketball-appTests-acknowledgements.plist */,
-				6786948CE93853D465AEDA0C341A2DF5 /* Pods-scout-basketball-appTests-dummy.m */,
-				B897336EA5635A6736018D0CBF1E7151 /* Pods-scout-basketball-appTests-Info.plist */,
-				14CDCFC0E232D2F8D527E76C32ED825B /* Pods-scout-basketball-appTests-umbrella.h */,
-				75FD293ECD2094F2CE1D347D2E723E0B /* Pods-scout-basketball-appTests.debug.xcconfig */,
-				4AFCFF39B71D6F363065658E89DB66A4 /* Pods-scout-basketball-appTests.release.xcconfig */,
+				79BFAE4F0928F95479DE70C637654FC5 /* Alamofire.modulemap */,
+				DFC11D87B8E53578044EA373E7DE6642 /* Alamofire-dummy.m */,
+				F71BBCEF1586B8C48F6C090283FD70AA /* Alamofire-Info.plist */,
+				2B0F05A3DBDE8E8AD6A8511F035D63D3 /* Alamofire-prefix.pch */,
+				845043F6DD76EF451A61A8C4EEB3BF6C /* Alamofire-umbrella.h */,
+				4D3E0E1E34DD4394C6023B622C262222 /* Alamofire.debug.xcconfig */,
+				A4153404C4C0A47E701390CEDAB4A093 /* Alamofire.release.xcconfig */,
 			);
-			name = "Pods-scout-basketball-appTests";
-			path = "Target Support Files/Pods-scout-basketball-appTests";
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		478CADFCCB07DA360C710BCAE4621519 /* Pods-scout-basketball-app */ = {
+		61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A97814B166F3429E157618C1A40892A3 /* Pods-scout-basketball-app.modulemap */,
-				030E89CF4F2D44788FADABAD90A68D16 /* Pods-scout-basketball-app-acknowledgements.markdown */,
-				4182B5BDA12CACA3203DA01C15A37834 /* Pods-scout-basketball-app-acknowledgements.plist */,
-				41D9E0F00A915BA5944B44573FEF2831 /* Pods-scout-basketball-app-dummy.m */,
-				6E1EE0F35F7D6CE2B1E520A09DF3EEEE /* Pods-scout-basketball-app-Info.plist */,
-				706653544DD380B3938C68CCE4B3B912 /* Pods-scout-basketball-app-umbrella.h */,
-				9E38C38A1A1EF4773C97846A257B6C70 /* Pods-scout-basketball-app.debug.xcconfig */,
-				C1A204523A412BEB115D9E7462B0A9DB /* Pods-scout-basketball-app.release.xcconfig */,
+				8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */,
+				FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6FF97FACCA57A9A7BC9912B94BE14E47 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				349B2325F6647FEE3C9209201FF5D4C2 /* AFError.swift */,
+				5BEF4837C47DFB74B73C8B82A591E94C /* Alamofire.swift */,
+				F43DFB0A067881554C0CF2E83093E1D6 /* AlamofireExtended.swift */,
+				B5DA36ADD8B0E94CE139C28448821E13 /* AuthenticationInterceptor.swift */,
+				DA4D233027C8491F55B2473FCDA12389 /* CachedResponseHandler.swift */,
+				B0EBFC4256A48F45E26B860D38479E52 /* Combine.swift */,
+				4ABD9F54297FF27309F1F8A34F99417C /* DispatchQueue+Alamofire.swift */,
+				0EC45C560942C5BCAB401419728808D3 /* EventMonitor.swift */,
+				333DAB6EC98A071AAD9A29C41818F346 /* HTTPHeaders.swift */,
+				4388F96485F322CF010F9CA6AF089C46 /* HTTPMethod.swift */,
+				0E0440F4381D065FED6264EFBCDB7960 /* MultipartFormData.swift */,
+				51BB5063650D66E661FD979273F90078 /* MultipartUpload.swift */,
+				401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */,
+				29EBC286A9BAE2611EFC71F7C9FB60B8 /* Notifications.swift */,
+				876F4F5D5DA538F51C4D4F27C9F64377 /* OperationQueue+Alamofire.swift */,
+				D26220434118FCFC30E4850800AC3068 /* ParameterEncoder.swift */,
+				998E57E5CB536D68D4A97BC1B56E62B8 /* ParameterEncoding.swift */,
+				51D45A2AF061C99B2355F19EC47243D9 /* Protected.swift */,
+				79EB40D0E4136A2EBA646F9A9D0DA652 /* RedirectHandler.swift */,
+				84B14ACFFB6A91762B582B46A3466A3F /* Request.swift */,
+				9C1741D7ACD43E5D0E9DBE557F396581 /* RequestInterceptor.swift */,
+				B4B8687B00F57762F34D3282826817C5 /* RequestTaskMap.swift */,
+				A6F2B77F50C8E86FDD27C5A573013C07 /* Response.swift */,
+				7197951AB8559109A9F40B71A85C843E /* ResponseSerialization.swift */,
+				673CB7AF23C7E1475678C8CCC286CF41 /* Result+Alamofire.swift */,
+				9C44EFF4AE1CC95C361F6A007EDBD6E7 /* RetryPolicy.swift */,
+				FA24B13480173106997D3F6538CDE3CD /* ServerTrustEvaluation.swift */,
+				4591D5844289F02F52985F30FFDA6BB5 /* Session.swift */,
+				FF72312136F76CCB5AC50BCDD37ED4A2 /* SessionDelegate.swift */,
+				5A51515830AB9FE94E01DF6F48146153 /* StringEncoding+Alamofire.swift */,
+				BCC350EEADBAF761D20138C94C4A0086 /* URLConvertible+URLRequestConvertible.swift */,
+				61F2B90B6F80D8F30747B3E178F5528F /* URLEncodedFormEncoder.swift */,
+				062C7841BFC1EEBD8A094A3CA60AEADA /* URLRequest+Alamofire.swift */,
+				970C386BD824FE4AD000560950399556 /* URLSessionConfiguration+Alamofire.swift */,
+				20097F794E1A1791AB97EBE230264E61 /* Validation.swift */,
+				5A6F22EC0F5633257B85B6E660A2165F /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		7480F3B902BEEAF4D8347B25D8EE7A2D /* Pods-scout-basketball-app-scout-basketball-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2468D7246E8A9756A99DC475AB9557C /* Pods-scout-basketball-app-scout-basketball-appUITests.modulemap */,
+				9C8BB4EB9C53097B4D96CDD5ED1745C7 /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.markdown */,
+				A96DE8FD14699EF9E77FCAEAA63249DF /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.plist */,
+				94C8D6AA180793A182B9DC35598A81D2 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m */,
+				88E5AEF1EFA40BFD3DABC24C2E44B10F /* Pods-scout-basketball-app-scout-basketball-appUITests-frameworks.sh */,
+				8E89E1283AEC70DAC72D0B280303BE88 /* Pods-scout-basketball-app-scout-basketball-appUITests-Info.plist */,
+				8341D5B5C36B95D3F02E834C7BD33247 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h */,
+				8FD2C68CA442804DA7F6192E1BAEF529 /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */,
+				3E299277738705D080BAE089F4B7D2D9 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */,
+			);
+			name = "Pods-scout-basketball-app-scout-basketball-appUITests";
+			path = "Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests";
+			sourceTree = "<group>";
+		};
+		77ED555BAE6AB3F892B171E662874BB5 /* Pods-scout-basketball-app */ = {
+			isa = PBXGroup;
+			children = (
+				BACBA02F1289D527B2B97B7F7A25E64A /* Pods-scout-basketball-app.modulemap */,
+				F0186423495B826CFF7B2D2734546D3F /* Pods-scout-basketball-app-acknowledgements.markdown */,
+				0AA6AF79EF346D967D767A2A51A15725 /* Pods-scout-basketball-app-acknowledgements.plist */,
+				4A3D73BF6AE8253B0E602872FB9FB48F /* Pods-scout-basketball-app-dummy.m */,
+				0A35F01B3E4D10452CBBC63A032D7E55 /* Pods-scout-basketball-app-frameworks.sh */,
+				2FA897D43160B2CE23242DD62BE5650A /* Pods-scout-basketball-app-Info.plist */,
+				2A0B3C5517F629593912B098D1C8310F /* Pods-scout-basketball-app-umbrella.h */,
+				2AB4D35BAA5B817969CC8D825A2CBF35 /* Pods-scout-basketball-app.debug.xcconfig */,
+				AFB91070B5849C508A1084A004347199 /* Pods-scout-basketball-app.release.xcconfig */,
 			);
 			name = "Pods-scout-basketball-app";
 			path = "Target Support Files/Pods-scout-basketball-app";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		924F1628820F19ED858970EB5F8F39AA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		84F342547DFD60B463DC80E0FDA67FAC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				478CADFCCB07DA360C710BCAE4621519 /* Pods-scout-basketball-app */,
-				A5D95216FE01ABA1D2608CB96667A0D9 /* Pods-scout-basketball-app-scout-basketball-appUITests */,
-				3E905EE511FDD48E60D2EF04D38DCEFB /* Pods-scout-basketball-appTests */,
+				77ED555BAE6AB3F892B171E662874BB5 /* Pods-scout-basketball-app */,
+				7480F3B902BEEAF4D8347B25D8EE7A2D /* Pods-scout-basketball-app-scout-basketball-appUITests */,
+				ACE4800A68E79AB2FA3CC5DCC83E3A82 /* Pods-scout-basketball-appTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A5D95216FE01ABA1D2608CB96667A0D9 /* Pods-scout-basketball-app-scout-basketball-appUITests */ = {
+		ACE4800A68E79AB2FA3CC5DCC83E3A82 /* Pods-scout-basketball-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C6B4AD43C0C94198F49EC2CBAF27361 /* Pods-scout-basketball-app-scout-basketball-appUITests.modulemap */,
-				230B226436885B25E8487430D1B516DF /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.markdown */,
-				EE49B8BD0AB34B5F53855A188E9460B5 /* Pods-scout-basketball-app-scout-basketball-appUITests-acknowledgements.plist */,
-				1D68221083261B792FF1058828A6E100 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m */,
-				76F8629C6639E28CC83953D8C01B11CC /* Pods-scout-basketball-app-scout-basketball-appUITests-Info.plist */,
-				52C46CC726F8682E1971E284CD7AA933 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h */,
-				07E827C19AB69003515EC12755CF64FE /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */,
-				D3A4CBEB9A0868FE1E4730541C7B7D20 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */,
+				C1F3C9FE71E8FC658746B3998AAE5ECA /* Pods-scout-basketball-appTests.modulemap */,
+				48CCF7D46F46816A26B71652435774C4 /* Pods-scout-basketball-appTests-acknowledgements.markdown */,
+				2224386EB3999568028EE33FA818EE1A /* Pods-scout-basketball-appTests-acknowledgements.plist */,
+				144428301923017E24F659102D06C786 /* Pods-scout-basketball-appTests-dummy.m */,
+				34A388E975C66C41D137307D4F72037B /* Pods-scout-basketball-appTests-Info.plist */,
+				686DCF80D3FB2FFFD9537C61861A51AB /* Pods-scout-basketball-appTests-umbrella.h */,
+				DF095EE747FF637D1AE0CC8E7F12E205 /* Pods-scout-basketball-appTests.debug.xcconfig */,
+				385F2B0E0ABA3D730257E1409BB224EC /* Pods-scout-basketball-appTests.release.xcconfig */,
 			);
-			name = "Pods-scout-basketball-app-scout-basketball-appUITests";
-			path = "Target Support Files/Pods-scout-basketball-app-scout-basketball-appUITests";
+			name = "Pods-scout-basketball-appTests";
+			path = "Target Support Files/Pods-scout-basketball-appTests";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				35681CE5E4DF0021818E506D8D433B24 /* Products */,
-				84F342547DFD60B463DC80E0FDA67FAC /* Targets Support Files */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D6535AE6278B88B90F3A376D1347504F /* Pods */,
+				1D22154A1C2249EFFC748EC5524C5F9A /* Products */,
+				924F1628820F19ED858970EB5F8F39AA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D6535AE6278B88B90F3A376D1347504F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				6FF97FACCA57A9A7BC9912B94BE14E47 /* Alamofire */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E7D1FDFFDCE7E6586F041502D7344C4 /* Headers */ = {
+		2E88C6A9FAC27C1EF04B5A20A7F4B36E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A2CF5C4A1179D472C59600BCB1E02B /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h in Headers */,
+				93EF1A2390B5A8AA68C23963910C1702 /* Pods-scout-basketball-app-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43787F3724369D65D58FBE8849787C19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB6629FE5ADA3E59702A1B400A90235 /* Pods-scout-basketball-app-scout-basketball-appUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8070B01910C64B9AFD0DB550EDE38D6B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D3DD4A8BB36733BA15868F7FB8C56CE /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,29 +397,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5E3FA26F36E653D9DD24FA55BAED465 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1848CFD933101048CA67F9FE9AD6D73 /* Pods-scout-basketball-app-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0077ED42185A0243B30F1BC10290E4BC /* Pods-scout-basketball-app-scout-basketball-appUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EB64BFF997719F9C5D54C930E4745D4 /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app-scout-basketball-appUITests" */;
+			buildConfigurationList = 26BBE04C7CC152BBCD5D1609E84A5721 /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app-scout-basketball-appUITests" */;
 			buildPhases = (
-				1E7D1FDFFDCE7E6586F041502D7344C4 /* Headers */,
-				54134C015E51F7CA8D9EB256E194C201 /* Sources */,
-				E668FCF1B7FA4FDEA1A37F9FD09341F6 /* Frameworks */,
-				5FA8FA868C0439B73FD7C6AB8F0948D1 /* Resources */,
+				43787F3724369D65D58FBE8849787C19 /* Headers */,
+				42D04C8C896A8EA1006DCB635334ED42 /* Sources */,
+				04CA851A603A1A5E2CCFC0CDB26137AF /* Frameworks */,
+				32137B381B97BA81B4B63B371EC92420 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5456135E2635913B7FBC1F5C582DC059 /* PBXTargetDependency */,
 			);
 			name = "Pods-scout-basketball-app-scout-basketball-appUITests";
 			productName = "Pods-scout-basketball-app-scout-basketball-appUITests";
@@ -242,7 +431,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				45201C272E0D0EF04E1A8A796BF5D17F /* PBXTargetDependency */,
+				40D13512F0DECD57DFEBD172DC8FF9C2 /* PBXTargetDependency */,
 			);
 			name = "Pods-scout-basketball-appTests";
 			productName = "Pods-scout-basketball-appTests";
@@ -251,20 +440,39 @@
 		};
 		5137DDE03A76EFAF6385106096E6F4B8 /* Pods-scout-basketball-app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2AF209E6B080068CB930727A5D57B53 /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app" */;
+			buildConfigurationList = C570B78D7ECB5883B20F422ABFD46C2F /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app" */;
 			buildPhases = (
-				C5E3FA26F36E653D9DD24FA55BAED465 /* Headers */,
-				3E6BE353DAD734D4EFF4EA03AB70D04D /* Sources */,
-				FBFA878E01A046243D7FF7981271BC9E /* Frameworks */,
-				6F8F6FAB75E35E5C769A262C8188DA75 /* Resources */,
+				2E88C6A9FAC27C1EF04B5A20A7F4B36E /* Headers */,
+				1F160C4DDDA338BCCB39DB22AAAEA169 /* Sources */,
+				620F655A52614BF451DDA27BB6D5D856 /* Frameworks */,
+				D8480894DBEDD2AD0D2B49C6B1E5207D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9FBC4853578FEA6F9C17A3557ABA7FD /* PBXTargetDependency */,
+			);
+			name = "Pods-scout-basketball-app";
+			productName = "Pods-scout-basketball-app";
+			productReference = BAA1516E101D58ADE70C2BF4DA81A682 /* Pods_scout_basketball_app.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78E219AC01CD5AFED663C9AB28280801 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				8070B01910C64B9AFD0DB550EDE38D6B /* Headers */,
+				2C8326877F6A9617C2FBE9BD15D95B59 /* Sources */,
+				9590D3FE7A79CD7CBEE3F346E8C19D4D /* Frameworks */,
+				9BCA7D105D531AE5DAF34FB86A2E623A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-scout-basketball-app";
-			productName = "Pods-scout-basketball-app";
-			productReference = BAA1516E101D58ADE70C2BF4DA81A682 /* Pods_scout_basketball_app.framework */;
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -285,10 +493,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 35681CE5E4DF0021818E506D8D433B24 /* Products */;
+			productRefGroup = 1D22154A1C2249EFFC748EC5524C5F9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				5137DDE03A76EFAF6385106096E6F4B8 /* Pods-scout-basketball-app */,
 				0077ED42185A0243B30F1BC10290E4BC /* Pods-scout-basketball-app-scout-basketball-appUITests */,
 				3867E3AFE1C4489BD7218F2B6D3BD107 /* Pods-scout-basketball-appTests */,
@@ -304,14 +513,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FA8FA868C0439B73FD7C6AB8F0948D1 /* Resources */ = {
+		32137B381B97BA81B4B63B371EC92420 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F8F6FAB75E35E5C769A262C8188DA75 /* Resources */ = {
+		9BCA7D105D531AE5DAF34FB86A2E623A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8480894DBEDD2AD0D2B49C6B1E5207D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,19 +537,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E6BE353DAD734D4EFF4EA03AB70D04D /* Sources */ = {
+		1F160C4DDDA338BCCB39DB22AAAEA169 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BA1627A90D8BB93FB75DD3C759E0F8 /* Pods-scout-basketball-app-dummy.m in Sources */,
+				8FE05F87C31ABD67EA24B06DDE752F35 /* Pods-scout-basketball-app-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54134C015E51F7CA8D9EB256E194C201 /* Sources */ = {
+		2C8326877F6A9617C2FBE9BD15D95B59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7007974E91DFBEAC22A07B55D1BFCDB8 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m in Sources */,
+				1208E81DA8B532D0646D627B50290EB6 /* AFError.swift in Sources */,
+				C6D5A4B4028B2C43380C9FA58BD5C8CA /* Alamofire-dummy.m in Sources */,
+				C1F1DB6A9CBDE584D09BA1613AAD4F9D /* Alamofire.swift in Sources */,
+				72EC2712926E6D28B52360D9AC41668F /* AlamofireExtended.swift in Sources */,
+				DC627AFC5B585686898B014184AFCABD /* AuthenticationInterceptor.swift in Sources */,
+				ABA85887A41495358C83CE3F3030EDEA /* CachedResponseHandler.swift in Sources */,
+				0A1849775CF90D514963187D3A771CF8 /* Combine.swift in Sources */,
+				27E59A11A2743B0595CDE3A08675EAE1 /* DispatchQueue+Alamofire.swift in Sources */,
+				6546D728B69398F93B506845141EBD61 /* EventMonitor.swift in Sources */,
+				91B837CE0DCD8EDB300FCDFFA1279162 /* HTTPHeaders.swift in Sources */,
+				013BAC24F7AC722E59517CB110A9E685 /* HTTPMethod.swift in Sources */,
+				45B8CC1C61E7A0BB28CFA8CE7C12FEBC /* MultipartFormData.swift in Sources */,
+				D03F1F02DE8606E6057D57866611BEBF /* MultipartUpload.swift in Sources */,
+				19D605A3233499828FB6B790869F3E9C /* NetworkReachabilityManager.swift in Sources */,
+				8AA937910F87915DE700CAB6C868689E /* Notifications.swift in Sources */,
+				0A900DF17E3B64F08AF673E9A0DDD697 /* OperationQueue+Alamofire.swift in Sources */,
+				4AEC050FA7D5ED52FDA9DF50EA3560DF /* ParameterEncoder.swift in Sources */,
+				D14066FAE94E304798E43651E5886D13 /* ParameterEncoding.swift in Sources */,
+				218C14EAE5AA31C30314AE0289B732A0 /* Protected.swift in Sources */,
+				666EC5C8356E6D4448A2FE7BEE77AD88 /* RedirectHandler.swift in Sources */,
+				EDC93BD7B9262119AE145E4C7A9D0212 /* Request.swift in Sources */,
+				6E54F64E8DA73F4B0B46C216F9F93F63 /* RequestInterceptor.swift in Sources */,
+				6C08F6A77889651626583100F560153D /* RequestTaskMap.swift in Sources */,
+				C1C5B050B55C15103ABC81769551A283 /* Response.swift in Sources */,
+				911448B2EDA2FF880108F77642797A88 /* ResponseSerialization.swift in Sources */,
+				66B26C6CAE737EC21F4BA1F1851B69C5 /* Result+Alamofire.swift in Sources */,
+				9FED70D1E1FBFB80E974E999EF732258 /* RetryPolicy.swift in Sources */,
+				47FDBBBD2704901588C3A7C56BBC502D /* ServerTrustEvaluation.swift in Sources */,
+				6AE407A4FB6C3D6ADD862CC6E3067A17 /* Session.swift in Sources */,
+				381FF05F8B4F611EE9C2FDBE4457BB89 /* SessionDelegate.swift in Sources */,
+				212EDC48B68107BEA9247F3464CE696E /* StringEncoding+Alamofire.swift in Sources */,
+				9B1D8A7798D8A6F518FC9AF9725431D0 /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				D31FC7FDD450C4CDD633ECBAD27C6221 /* URLEncodedFormEncoder.swift in Sources */,
+				D5EAAFB6FAD77A8F0699345149BA3CBB /* URLRequest+Alamofire.swift in Sources */,
+				F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				F0F3224FF592F9BA2A044A2FC2BD4CCD /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42D04C8C896A8EA1006DCB635334ED42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D54C287A45F8E79ECD403C41E666A399 /* Pods-scout-basketball-app-scout-basketball-appUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,18 +607,65 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45201C272E0D0EF04E1A8A796BF5D17F /* PBXTargetDependency */ = {
+		40D13512F0DECD57DFEBD172DC8FF9C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-scout-basketball-app";
 			target = 5137DDE03A76EFAF6385106096E6F4B8 /* Pods-scout-basketball-app */;
-			targetProxy = A87B69E3B1C70BD8A79496678464D8F4 /* PBXContainerItemProxy */;
+			targetProxy = CD66D5089BECAA49C246C531910C9A0F /* PBXContainerItemProxy */;
+		};
+		5456135E2635913B7FBC1F5C582DC059 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 59BF9AA1947FB6AF1F687B83BDB8860A /* PBXContainerItemProxy */;
+		};
+		A9FBC4853578FEA6F9C17A3557ABA7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 4FBC814BC3E6A5987BD66E3E88488651 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		34287ECC6A9BAFA2B493F4D19B892D5B /* Release */ = {
+		2444D36F2CB5FF3F9469EF5F6322EA10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1A204523A412BEB115D9E7462B0A9DB /* Pods-scout-basketball-app.release.xcconfig */;
+			baseConfigurationReference = 4D3E0E1E34DD4394C6023B622C262222 /* Alamofire.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4424A8476A01DF4F55996C95A8D6F140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB91070B5849C508A1084A004347199 /* Pods-scout-basketball-app.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -525,7 +831,7 @@
 		};
 		7A1E96AB66D619AB623C91FBCB933937 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AFCFF39B71D6F363065658E89DB66A4 /* Pods-scout-basketball-appTests.release.xcconfig */;
+			baseConfigurationReference = 385F2B0E0ABA3D730257E1409BB224EC /* Pods-scout-basketball-appTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -561,9 +867,45 @@
 			};
 			name = Release;
 		};
-		80F383316896C968CB6D5F7B48B39A40 /* Debug */ = {
+		9B66E952E27F29569285AB82461A2F34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E38C38A1A1EF4773C97846A257B6C70 /* Pods-scout-basketball-app.debug.xcconfig */;
+			baseConfigurationReference = A4153404C4C0A47E701390CEDAB4A093 /* Alamofire.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB062A8479B8831046AB44C171A75DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AB4D35BAA5B817969CC8D825A2CBF35 /* Pods-scout-basketball-app.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -598,9 +940,9 @@
 			};
 			name = Debug;
 		};
-		9AD338EF334D70CC8A724BB2E8D62854 /* Release */ = {
+		AEDC38465ECB78C236066344D71B0604 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3A4CBEB9A0868FE1E4730541C7B7D20 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */;
+			baseConfigurationReference = 3E299277738705D080BAE089F4B7D2D9 /* Pods-scout-basketball-app-scout-basketball-appUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -638,7 +980,7 @@
 		};
 		D90E194918D8F6DE9E8DE9FC704A0CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75FD293ECD2094F2CE1D347D2E723E0B /* Pods-scout-basketball-appTests.debug.xcconfig */;
+			baseConfigurationReference = DF095EE747FF637D1AE0CC8E7F12E205 /* Pods-scout-basketball-appTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -673,9 +1015,9 @@
 			};
 			name = Debug;
 		};
-		DB09A673F1EFFD1A463C2F729E5F1CF3 /* Debug */ = {
+		F9BE9D0CDED861F7E06DDF5F865DA9A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07E827C19AB69003515EC12755CF64FE /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */;
+			baseConfigurationReference = 8FD2C68CA442804DA7F6192E1BAEF529 /* Pods-scout-basketball-app-scout-basketball-appUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -713,6 +1055,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		26BBE04C7CC152BBCD5D1609E84A5721 /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app-scout-basketball-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BE9D0CDED861F7E06DDF5F865DA9A5 /* Debug */,
+				AEDC38465ECB78C236066344D71B0604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -722,11 +1073,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EB64BFF997719F9C5D54C930E4745D4 /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app-scout-basketball-appUITests" */ = {
+		78E219AC01CD5AFED663C9AB28280801 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB09A673F1EFFD1A463C2F729E5F1CF3 /* Debug */,
-				9AD338EF334D70CC8A724BB2E8D62854 /* Release */,
+				2444D36F2CB5FF3F9469EF5F6322EA10 /* Debug */,
+				9B66E952E27F29569285AB82461A2F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -740,11 +1091,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2AF209E6B080068CB930727A5D57B53 /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app" */ = {
+		C570B78D7ECB5883B20F422ABFD46C2F /* Build configuration list for PBXNativeTarget "Pods-scout-basketball-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				80F383316896C968CB6D5F7B48B39A40 /* Debug */,
-				34287ECC6A9BAFA2B493F4D19B892D5B /* Release */,
+				AB062A8479B8831046AB44C171A75DA5 /* Debug */,
+				4424A8476A01DF4F55996C95A8D6F140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
