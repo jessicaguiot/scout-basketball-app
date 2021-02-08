@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let nbbMatchesCoordinator = NBBMatchesCoordinator()
-        let navigationController  = UINavigationController(rootViewController: nbbMatchesCoordinator.rootViewController)
+        let nbaMatchesCoordinator = NBAMatchesCoordinator()
+        let navigationController  = UINavigationController(rootViewController: nbaMatchesCoordinator.rootViewController)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene

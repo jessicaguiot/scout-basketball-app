@@ -10,8 +10,10 @@ import Alamofire
 
 class NetworkingClient {
     
-    public func executeRequest(_ url: URL) {
-        
+    typealias WebServiceResponse = (ResponseAPI?, Error?) -> Void
+    
+    public func executeRequest(_ url: URL, completion: @escaping WebServiceResponse) {
+    
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         
@@ -21,9 +23,24 @@ class NetworkingClient {
             "x-rapidapi-host": "api-basketball.p.rapidapi.com"
         ]
         
-        AF.request(url, headers: headers).responseJSON { response in
-            
-            debugPrint(response)
+        var localTimeZoneAbbreviation: String {
+            return TimeZone.current.identifier
+        }
+        
+        let parameters = [
+            "league": "12",
+            "season": "2020-2021",
+            "timezone": localTimeZoneAbbreviation,
+            "date": "2021-02-08"
+        ]
+        
+        AF.request(url, parameters: parameters, headers: headers).responseDecodable(of: ResponseAPI.self) { response in
+
+            if let error = response.error {
+                completion(nil, error)
+            }
+
+            completion(response.value, nil)
         }
     }
 }

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class NBBMatchesTableViewCell: UITableViewCell, ViewCode {
+class NBAMatchesTableViewCell: UITableViewCell, ViewCode {
     
-    static let reuseIdentifier = "NBBMatchesTableViewCell"
+    static let reuseIdentifier = "NBAMatchesTableViewCell"
 
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
