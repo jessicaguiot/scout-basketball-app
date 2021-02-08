@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct NBAMatches {
+struct NBAMatches: Codable {
     
-    var matches: [Response]
-    var results: Int
+    var matches: [Response]?
+    var results: Int?
 }
 
 

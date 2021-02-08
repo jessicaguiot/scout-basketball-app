@@ -10,28 +10,88 @@ import UIKit
 
 class NBAMatchesViewModel {
     
+    //MARK: - Properties
+    
+    var dataSourceNBA = NBAMatches() {
+        
+        didSet {
+            
+            self.setupNBAMatches(with: dataSourceNBA)
+            self.didFinishFetch?()
+        }
+    }
+    
+    var didFinishFetch: (() -> ())?
+    
+    var numberOfMatches: Int?
+    var nameHomeTeam: [String] = []
+    var nameAwayTeam: [String] = []
+    var timeMatch: [String] = []
+    var homeTeamsLogo: [String] = []
+    var awayTeamsLogo: [String] = []
+    
     let networkingClient = NetworkingClient()
     
     //MARK: - Communication with NBA's API
     
-    func getMatchesNBA() {
+    func fetchMatchesNBA() {
         
         let urlToExecute = URL(string: "https://api-basketball.p.rapidapi.com/games")!
         
-        networkingClient.executeRequest(urlToExecute) { (responseAPI, error) in
+        networkingClient.executeRequest(urlToExecute) { (matches, error) in
             
             if let error = error {
                 print(error.localizedDescription)
             }
             
-            if let responses = responseAPI?.response, let results = responseAPI?.results {
-                
-                DispatchQueue.main.async {
-                    
-                    var matches = NBAMatches(matches: responses, results: results)
-                    print(matches)
-                }
-            }
+            self.dataSourceNBA.matches = matches!.response
+            self.dataSourceNBA.results = matches!.results
         }
+    }
+    
+    private func setupNBAMatches(with matches: NBAMatches) {
+        
+        self.numberOfMatches = matches.results
+        
+        for match in matches.matches! {
+            
+            self.nameHomeTeam.append(match.teams.home.name)
+            self.nameAwayTeam.append(match.teams.away.name)
+            self.timeMatch.append(match.time)
+            self.homeTeamsLogo.append(match.teams.home.logo)
+            self.awayTeamsLogo.append(match.teams.away.logo)
+        }
+    }
+    
+    func getTodayDate() -> String {
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM"
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
+}
+
+extension UIImageView {
+    
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
     }
 }

@@ -39,8 +39,11 @@ class NetworkingClient {
             if let error = response.error {
                 completion(nil, error)
             }
-
-            completion(response.value, nil)
+            
+            if let matches = response.value {
+                
+                completion(matches, nil)
+            }
         }
     }
 }

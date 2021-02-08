@@ -12,6 +12,7 @@ class NBAMatchesView: UIView, ViewCode {
     let nbaMatchesTableView: UITableView = {
        
         let tableView = UITableView()
+        tableView.rowHeight = 95
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
