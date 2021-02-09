@@ -86,7 +86,7 @@ extension NBAMatchesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.homeTeamLabel.text = self.namesHomeTeam![indexPath.row]
         cell.awayTeamLabel.text = self.namesAwayTeam![indexPath.row]
         cell.matchTimeLabel.text = self.timesMatch![indexPath.row]
-        cell.matchDateLabel.text = nbaMatchesViewModel.getTodayDate()
+        cell.matchDateLabel.text = nbaMatchesViewModel.getTodayDate(dateFormat: "dd/MM")
         cell.homeTeamLogoImageView.downloaded(from: self.homeTeamsLogo![indexPath.row])
         cell.awayTeamLogoImageView.downloaded(from: self.awayTeamsLogo![indexPath.row])
         

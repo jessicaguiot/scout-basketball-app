@@ -19,6 +19,7 @@ struct ResponseAPI: Codable {
 struct Parameters: Codable {
     
     let league, date, timezone, season: String
+    
 }
 
 struct Errors: Codable {
@@ -78,8 +79,8 @@ struct Scores: Codable {
 
 struct ScoresTeam: Codable {
     
-    let quarter1, quarter2, quarter3, quarter4: String?
-    let overTime, total: String?
+    let quarter1, quarter2, quarter3, quarter4: Int?
+    let overTime, total: Int?
     
     enum CodingKeys: String, CodingKey {
         

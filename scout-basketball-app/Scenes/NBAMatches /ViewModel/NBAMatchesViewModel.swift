@@ -30,7 +30,7 @@ class NBAMatchesViewModel {
     var homeTeamsLogo: [String] = []
     var awayTeamsLogo: [String] = []
     
-    let networkingClient = NetworkingClient()
+    let dataService = DataService()
     
     //MARK: - Communication with NBA's API
     
@@ -38,14 +38,17 @@ class NBAMatchesViewModel {
         
         let urlToExecute = URL(string: "https://api-basketball.p.rapidapi.com/games")!
         
-        networkingClient.executeRequest(urlToExecute) { (matches, error) in
+        dataService.executeRequest(urlToExecute) { (matches, error) in
             
             if let error = error {
                 print(error.localizedDescription)
             }
             
-            self.dataSourceNBA.matches = matches!.response
-            self.dataSourceNBA.results = matches!.results
+            if let responseApi = matches?.response, let resultsAPI = matches?.results {
+                
+                self.dataSourceNBA.matches = responseApi
+                self.dataSourceNBA.results = resultsAPI
+            }
         }
     }
     
@@ -63,11 +66,11 @@ class NBAMatchesViewModel {
         }
     }
     
-    func getTodayDate() -> String {
+    func getTodayDate(dateFormat: String) -> String {
         
         let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM"
+        dateFormatter.dateFormat = dateFormat
         let dateString = dateFormatter.string(from: date)
         return dateString
     }

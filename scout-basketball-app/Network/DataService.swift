@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class NetworkingClient {
+class DataService {
     
     typealias WebServiceResponse = (ResponseAPI?, Error?) -> Void
     
@@ -31,7 +31,7 @@ class NetworkingClient {
             "league": "12",
             "season": "2020-2021",
             "timezone": localTimeZoneAbbreviation,
-            "date": "2021-02-08"
+            "date": NBAMatchesViewModel().getTodayDate(dateFormat: "yyyy-MM-dd")
         ]
         
         AF.request(url, parameters: parameters, headers: headers).responseDecodable(of: ResponseAPI.self) { response in
@@ -39,11 +39,17 @@ class NetworkingClient {
             if let error = response.error {
                 completion(nil, error)
             }
-            
+
             if let matches = response.value {
-                
+
                 completion(matches, nil)
             }
         }
+        
+//        AF.request(url, parameters: parameters, headers: headers).responseJSON { response in
+//
+//            debugPrint(response)
+//
+//        }
     }
 }
