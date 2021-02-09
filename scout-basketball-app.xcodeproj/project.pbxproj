@@ -27,6 +27,10 @@
 		D8299BEC25CD86AD00DC8B3B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BEB25CD86AD00DC8B3B /* DataService.swift */; };
 		D8AB28CC25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28CB25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift */; };
 		D8AB28D125D2BAD000DD6B20 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28D025D2BAD000DD6B20 /* DataServiceTests.swift */; };
+		D8AB28DF25D2C2EE00DD6B20 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */; };
+		D8AB28E725D2C33900DD6B20 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28E625D2C33900DD6B20 /* StartViewController.swift */; };
+		D8AB28EC25D2C3EA00DD6B20 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28EB25D2C3EA00DD6B20 /* StartCoordinator.swift */; };
+		D8AB28F125D2C48D00DD6B20 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28F025D2C48D00DD6B20 /* StartView.swift */; };
 		D8AB6A4B25D1755100D517DB /* NBAMatchesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB6A4A25D1755100D517DB /* NBAMatchesResponseModel.swift */; };
 		D8AB6A5325D1858F00D517DB /* NBAMatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB6A5225D1858F00D517DB /* NBAMatches.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +84,10 @@
 		D8299BEB25CD86AD00DC8B3B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D8AB28CB25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAMatchesViewModelTests.swift; sourceTree = "<group>"; };
 		D8AB28D025D2BAD000DD6B20 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		D8AB28E625D2C33900DD6B20 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		D8AB28EB25D2C3EA00DD6B20 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		D8AB28F025D2C48D00DD6B20 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		D8AB6A4A25D1755100D517DB /* NBAMatchesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAMatchesResponseModel.swift; sourceTree = "<group>"; };
 		D8AB6A5225D1858F00D517DB /* NBAMatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAMatches.swift; sourceTree = "<group>"; };
 		E64A137A2A896505CF90072C /* Pods-scout-basketball-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scout-basketball-app.release.xcconfig"; path = "Target Support Files/Pods-scout-basketball-app/Pods-scout-basketball-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 		D8299BAB25CD6EF100DC8B3B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D8AB28D825D2C27E00DD6B20 /* Start */,
 				D8299BBE25CD70E500DC8B3B /* NBAMatches  */,
 			);
 			path = Scenes;
@@ -279,6 +288,57 @@
 				D8299BEB25CD86AD00DC8B3B /* DataService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D8AB28D825D2C27E00DD6B20 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB28DD25D2C2AA00DD6B20 /* Coordinator */,
+				D8AB28DC25D2C2A400DD6B20 /* Model */,
+				D8AB28DB25D2C29C00DD6B20 /* Controller */,
+				D8AB28DA25D2C29000DD6B20 /* ViewModel */,
+				D8AB28D925D2C28800DD6B20 /* View */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		D8AB28D925D2C28800DD6B20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB28F025D2C48D00DD6B20 /* StartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8AB28DA25D2C29000DD6B20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D8AB28DB25D2C29C00DD6B20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB28E625D2C33900DD6B20 /* StartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8AB28DC25D2C2A400DD6B20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8AB28DD25D2C2AA00DD6B20 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D8AB28EB25D2C3EA00DD6B20 /* StartCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,15 +578,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8AB28F125D2C48D00DD6B20 /* StartView.swift in Sources */,
 				D8299BB525CD6FFA00DC8B3B /* Coordinator.swift in Sources */,
 				D8299BEC25CD86AD00DC8B3B /* DataService.swift in Sources */,
 				D8AB6A4B25D1755100D517DB /* NBAMatchesResponseModel.swift in Sources */,
+				D8AB28EC25D2C3EA00DD6B20 /* StartCoordinator.swift in Sources */,
 				D8AB6A5325D1858F00D517DB /* NBAMatches.swift in Sources */,
 				D8299BCA25CD71C300DC8B3B /* NBAMatchesViewController.swift in Sources */,
+				D8AB28E725D2C33900DD6B20 /* StartViewController.swift in Sources */,
 				D8299BBA25CD704200DC8B3B /* ViewCode.swift in Sources */,
 				D8299B7D25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld in Sources */,
 				D8299B7325CD6E6700DC8B3B /* AppDelegate.swift in Sources */,
 				D8299B7525CD6E6700DC8B3B /* SceneDelegate.swift in Sources */,
+				D8AB28DF25D2C2EE00DD6B20 /* StartViewModel.swift in Sources */,
 				D8299BDF25CD7A9100DC8B3B /* NBAMatchesTableViewCell.swift in Sources */,
 				D8299BC525CD717C00DC8B3B /* NBAMatchesCoordinator.swift in Sources */,
 				D8299BCF25CD724100DC8B3B /* NBAMatchesViewModel.swift in Sources */,
