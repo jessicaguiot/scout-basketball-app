@@ -14,6 +14,8 @@ class MatchesViewController: UIViewController {
     
     var matchesContentView = MatchesView()
     
+    let addNewMatchBottomSheetViewController = AddNewMatchBottomSheetViewController()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -35,6 +37,50 @@ class MatchesViewController: UIViewController {
         
         self.view = matchesContentView
         self.setupNavigationBar(titleScreen: "Partidas")
+        setAddNewMatchNavButton()
+        setupBottomSheetView()
+        setupMatchesTableView()
+    }
+    
+    private func setupBottomSheetView() {
+        
+        addNewMatchBottomSheetViewController.modalPresentationStyle = .overCurrentContext
+    }
+    
+    private func setAddNewMatchNavButton() {
+        
+        let addNewMatchButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddNewMatchModal))
+        self.navigationItem.rightBarButtonItem = addNewMatchButton
     }
 
+    
+    @objc func showAddNewMatchModal() {
+        
+        self.present(addNewMatchBottomSheetViewController, animated: true, completion: nil)
+        addNewMatchBottomSheetViewController.presentBlurView(true)
+    }
+
+}
+
+extension MatchesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func setupMatchesTableView() {
+        
+        matchesContentView.matchesTableView.delegate = self
+        matchesContentView.matchesTableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MatchesTableViewCell.reuseIdentifier) as? MatchesTableViewCell else {
+            return MatchesTableViewCell()
+        }
+        
+        return cell
+    }
 }

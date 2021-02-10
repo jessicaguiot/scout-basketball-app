@@ -23,7 +23,7 @@ class PlayersView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .red
+        self.backgroundColor = .white
     }
     
     func setupViewElementsHierarchy() {

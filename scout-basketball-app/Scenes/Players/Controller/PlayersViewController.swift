@@ -35,6 +35,17 @@ class PlayersViewController: UIViewController {
         
         self.view = playersContentView
         self.setupNavigationBar(titleScreen: "Jogadores")
+        setAddNewPlayerNavButton()
+    }
+    
+    private func setAddNewPlayerNavButton() {
+        
+        let addNewPlayerButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddNewPlayerModal))
+        self.navigationItem.rightBarButtonItem = addNewPlayerButton
+    }
+    
+    @objc func showAddNewPlayerModal() {
+        print("add new player")
     }
 
 }

@@ -54,3 +54,4 @@ class MenuView: UIView, ViewCode {
         menuTableView.register(MenuTableViewCell.self, forCellReuseIdentifier: MenuTableViewCell.reuseIdentifier)
     }
 }
+

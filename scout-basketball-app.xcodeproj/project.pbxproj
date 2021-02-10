@@ -26,6 +26,9 @@
 		D8299BDF25CD7A9100DC8B3B /* NBAMatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BDE25CD7A9100DC8B3B /* NBAMatchesTableViewCell.swift */; };
 		D8299BEC25CD86AD00DC8B3B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8299BEB25CD86AD00DC8B3B /* DataService.swift */; };
 		D83C943E25D3FE2C00E36CD0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C943D25D3FE2C00E36CD0 /* MenuTableViewCell.swift */; };
+		D83C944325D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C944225D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift */; };
+		D83C944B25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C944A25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift */; };
+		D83C945025D4473400E36CD0 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C944F25D4473400E36CD0 /* MatchesTableViewCell.swift */; };
 		D8AB28CC25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28CB25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift */; };
 		D8AB28D125D2BAD000DD6B20 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28D025D2BAD000DD6B20 /* DataServiceTests.swift */; };
 		D8AB28DF25D2C2EE00DD6B20 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */; };
@@ -96,6 +99,9 @@
 		D8299BDE25CD7A9100DC8B3B /* NBAMatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAMatchesTableViewCell.swift; sourceTree = "<group>"; };
 		D8299BEB25CD86AD00DC8B3B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D83C943D25D3FE2C00E36CD0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		D83C944225D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMatchBottomSheetView.swift; sourceTree = "<group>"; };
+		D83C944A25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMatchBottomSheetViewController.swift; sourceTree = "<group>"; };
+		D83C944F25D4473400E36CD0 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
 		D8AB28CB25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAMatchesViewModelTests.swift; sourceTree = "<group>"; };
 		D8AB28D025D2BAD000DD6B20 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
@@ -438,6 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				D8AB292125D2D48700DD6B20 /* MatchesView.swift */,
+				D83C944225D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift */,
+				D83C944F25D4473400E36CD0 /* MatchesTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				D8AB294225D2D5D500DD6B20 /* MatchesViewController.swift */,
+				D83C944A25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -765,7 +774,9 @@
 				D8AB28F125D2C48D00DD6B20 /* StartView.swift in Sources */,
 				D8AB294B25D2D64500DD6B20 /* PlayersViewController.swift in Sources */,
 				D8299BB525CD6FFA00DC8B3B /* Coordinator.swift in Sources */,
+				D83C945025D4473400E36CD0 /* MatchesTableViewCell.swift in Sources */,
 				D8299BEC25CD86AD00DC8B3B /* DataService.swift in Sources */,
+				D83C944325D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift in Sources */,
 				D8AB293925D2D56600DD6B20 /* MatchesCoordinator.swift in Sources */,
 				D8AB290425D2D2B600DD6B20 /* MenuViewModel.swift in Sources */,
 				D8AB6A4B25D1755100D517DB /* NBAMatchesResponseModel.swift in Sources */,
@@ -778,6 +789,7 @@
 				D83C943E25D3FE2C00E36CD0 /* MenuTableViewCell.swift in Sources */,
 				D8299BBA25CD704200DC8B3B /* ViewCode.swift in Sources */,
 				D8AB294325D2D5D500DD6B20 /* MatchesViewController.swift in Sources */,
+				D83C944B25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift in Sources */,
 				D8AB292225D2D48700DD6B20 /* MatchesView.swift in Sources */,
 				D8AB290C25D2D2E600DD6B20 /* MenuViewController.swift in Sources */,
 				D8299B7D25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld in Sources */,

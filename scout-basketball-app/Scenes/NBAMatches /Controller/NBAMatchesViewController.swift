@@ -23,7 +23,7 @@ class NBAMatchesViewController: UIViewController {
     
     override func loadView() {
         
-        setupDataFromViewModel()
+        
     }
     
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class NBAMatchesViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
+        setupDataFromViewModel()
     }
     
     init(viewModel: NBAMatchesViewModel) {

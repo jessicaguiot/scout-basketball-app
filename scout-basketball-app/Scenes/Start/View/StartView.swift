@@ -95,6 +95,6 @@ extension UITextField {
         bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive                                               = true
         bottomLine.widthAnchor.constraint(equalToConstant: 270).isActive                                                = true
         bottomLine.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive                                       = true
-        bottomLine.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive                                         = true
+        bottomLine.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5).isActive                                         = true
     }
 }
