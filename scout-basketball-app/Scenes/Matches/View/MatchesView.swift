@@ -22,7 +22,7 @@ class MatchesView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .green
+        self.backgroundColor = .white
     }
     
     func setupViewElementsHierarchy() {

@@ -17,7 +17,7 @@ class MatchesViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view = matchesContentView
+        setup()
     }
     
     init(viewModel: MatchesViewModel) {
@@ -29,6 +29,12 @@ class MatchesViewController: UIViewController {
     required init?(coder: NSCoder) {
         
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        
+        self.view = matchesContentView
+        self.setupNavigationBar(titleScreen: "Partidas")
     }
 
 }

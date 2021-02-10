@@ -16,14 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         //let nbaMatchesCoordinator = NBAMatchesCoordinator()
-        let startCoordinator = StartCoordinator()
-        let navigationController  = UINavigationController(rootViewController: startCoordinator.rootViewController)
+        //let startCoordinator = StartCoordinator()
+        let menuCoordinator = MenuCoordinator()
+        let navigationController  = UINavigationController(rootViewController: menuCoordinator.rootViewController)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

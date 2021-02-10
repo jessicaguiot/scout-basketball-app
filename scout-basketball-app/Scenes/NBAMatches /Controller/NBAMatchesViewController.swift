@@ -23,17 +23,14 @@ class NBAMatchesViewController: UIViewController {
     
     override func loadView() {
         
-        self.view = nbaMatchesContentView
-        setupNavigationBar()
+        setupDataFromViewModel()
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        nbaMatchesContentView.nbaMatchesTableView.delegate = self
-        nbaMatchesContentView.nbaMatchesTableView.dataSource = self
         
-        setupDataFromViewModel()
+        setup()
     }
     
     init(viewModel: NBAMatchesViewModel) {
@@ -46,10 +43,12 @@ class NBAMatchesViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupNavigationBar() {
+    func setup() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.topItem?.title = "Partidas NBA"
+        self.view = nbaMatchesContentView
+        self.setupNavigationBar(titleScreen: "Partidas NBA")
+        nbaMatchesContentView.nbaMatchesTableView.delegate = self
+        nbaMatchesContentView.nbaMatchesTableView.dataSource = self
     }
     
     private func setupDataFromViewModel() {
