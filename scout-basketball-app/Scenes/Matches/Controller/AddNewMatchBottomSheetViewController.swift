@@ -14,7 +14,7 @@ protocol BottomSheetHandler {
 
 class AddNewMatchBottomSheetViewController: UIViewController {
     
-    let contentBottomSheetView = AddNewMatchBottomSheetView()
+    let matchesBottomSheetContentView = AddNewMatchBottomSheetView()
     var delegate: BottomSheetHandler?
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class AddNewMatchBottomSheetViewController: UIViewController {
     
     private func setup() {
         
-        self.view = contentBottomSheetView
+        self.view = matchesBottomSheetContentView
         addTapGestureRecognizer()
         setupCancelButton()
         setupKeybordNotifications()
@@ -33,13 +33,13 @@ class AddNewMatchBottomSheetViewController: UIViewController {
     
     private func setupCancelButton() {
         
-        contentBottomSheetView.cancelButton.addTarget(self, action: #selector(hideBottomSheetViewCancelButton), for: .touchUpInside)
+        matchesBottomSheetContentView.cancelButton.addTarget(self, action: #selector(hideBottomSheetViewCancelButton), for: .touchUpInside)
     }
     
     private func addTapGestureRecognizer() {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideBottomSheetTapGesture))
-        contentBottomSheetView.blurView.addGestureRecognizer(tapGestureRecognizer)
+        matchesBottomSheetContentView.blurView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     private func setupKeybordNotifications() {
@@ -62,12 +62,12 @@ class AddNewMatchBottomSheetViewController: UIViewController {
     
     @objc func keyboardWillShow(sender: NSNotification) {
  
-        contentBottomSheetView.bottomSheetGoUp()
+        matchesBottomSheetContentView.bottomSheetGoUp()
     }
     
     @objc func keyboardWillHide(sender: NSNotification) {
         
-        contentBottomSheetView.bottomSheetGoDown()
+        matchesBottomSheetContentView.bottomSheetGoDown()
     }
     
     private func hideBottomSheetView() {
@@ -82,12 +82,12 @@ class AddNewMatchBottomSheetViewController: UIViewController {
         
         if present {
             
-            contentBottomSheetView.blurView.isHidden  = false
-            contentBottomSheetView.blurView.isUserInteractionEnabled = true
+            matchesBottomSheetContentView.blurView.isHidden  = false
+            matchesBottomSheetContentView.blurView.isUserInteractionEnabled = true
         } else {
             
-            contentBottomSheetView.blurView.isHidden  = true
-            contentBottomSheetView.blurView.isUserInteractionEnabled = false
+            matchesBottomSheetContentView.blurView.isHidden  = true
+            matchesBottomSheetContentView.blurView.isUserInteractionEnabled = false
         }
     }
 }

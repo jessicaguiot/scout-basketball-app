@@ -12,6 +12,7 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
     static let reuseIdentifier = "MatchesTableViewCell"
     
     let userTeamNameLabel: UILabel = {
+        
         let label = UILabel()
         label.text = "UFC"
         label.font = UIFont(name: "SF Pro Text", size: 15)
@@ -20,6 +21,7 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
     }()
     
     let opponentTeamNameLabel: UILabel = {
+        
         let label = UILabel()
         label.text = "Unifor"
         label.font = UIFont(name: "SF Pro Text", size: 15)
@@ -28,6 +30,7 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
     }()
     
     let totalPointsUserTeamNameLabel: UILabel = {
+        
         let label = UILabel()
         label.text = "33"
         label.textAlignment = .right
@@ -37,6 +40,7 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
     }()
     
     let totalPointsOpponentTeamNameLabel: UILabel = {
+        
         let label = UILabel()
         label.text = "40"
         label.textAlignment = .right
