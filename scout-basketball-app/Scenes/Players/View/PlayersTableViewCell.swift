@@ -14,7 +14,6 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
     let playerNameLabel: UILabel = {
         
         let label = UILabel()
-        label.text = "Alexandrina Andrade"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -23,7 +22,6 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
     let playerNumberLabel: UILabel = {
         
         let label = UILabel()
-        label.text = "26"
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

@@ -85,7 +85,7 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
             
             opponentTeamNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             opponentTeamNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-            opponentTeamNameLabel.widthAnchor.constraint(equalToConstant: 80),
+            opponentTeamNameLabel.widthAnchor.constraint(equalToConstant: 150),
             opponentTeamNameLabel.heightAnchor.constraint(equalToConstant: 25),
             
             totalPointsUserTeamNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),

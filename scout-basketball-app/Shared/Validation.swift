@@ -28,8 +28,8 @@ enum ValidationType {
 
 enum RegEx: String {
     
-    case alphabeticStringWithSpace = "^[a-zA-Z ]*$"
-    case number = "[0-9]{2-4}"
+    case alphabeticStringWithSpace = "^[a-zA-Z  ]*$"
+    case number = "^[0-9]*$"
 }
 
 enum AlertMessages: String {
@@ -58,16 +58,16 @@ class Validation: NSObject {
             case .alphabeticStringWithSpace:
                 
                 if let tempValue = isValidString((valueToBeChecked.inputValue, .alphabeticStringWithSpace, .emptyAlphabeticString, .inValidAlphabeticString)) {
-                    
                     return tempValue
                 }
+
             case .number:
                 
                 if let tempValue = isValidString((valueToBeChecked.inputValue, .number, .inValidNumber, .inValidNumber)) {
-                    
                     return tempValue
                 }
             }
+
         }
         
         return .sucess

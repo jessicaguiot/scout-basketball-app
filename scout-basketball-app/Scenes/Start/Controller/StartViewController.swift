@@ -56,16 +56,6 @@ class StartViewController: UIViewController {
         case .failure(_, let message):
             
             print(message.localized())
-            showErrorMessage(message.localized())
         }
-    }
-    
-    private func showErrorMessage(_ message: String) {
-        
-        startContentView.errorMessageLabel.text = message.uppercased()
-        startContentView.errorMessageLabel.isHidden = false
-        UIView.animate(withDuration: 10, animations: { () -> Void in
-            self.startContentView.errorMessageLabel.alpha = 0
-        })
     }
 }

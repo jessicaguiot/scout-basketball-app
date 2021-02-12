@@ -95,7 +95,7 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
     weak var bottomSheetHeightAnchorConstraintWithKeyboard: NSLayoutConstraint?
     
     let bottomSheetHeightAnchor: CGFloat = 280
-    let positionsList = ["ALA", "PIVÔ", "ARMADORA"]
+    let positionsList = ["ALA", "PIVO", "ARMADORA"]
     let items = ["Titular", "Reserva"]
     
     var segmentedControl = UISegmentedControl()
