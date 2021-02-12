@@ -7,6 +7,8 @@ target 'scout-basketball-app' do
 
   # Pods for scout-basketball-app
 
+pod 'Alamofire', '~> 5.2'
+
   target 'scout-basketball-appTests' do
     inherit! :search_paths
     # Pods for testing

@@ -15,14 +15,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let nbbMatchesCoordinator = NBBMatchesCoordinator()
-        let navigationController  = UINavigationController(rootViewController: nbbMatchesCoordinator.rootViewController)
+        let defaults = UserDefaults.standard
+        let startCoordinator = StartCoordinator()
+        let menuCoordinator = MenuCoordinator()
+        var navigationController = UINavigationController()
+        
+        if let _ = defaults.string(forKey: "isAppAlreadyLaunchedOnce") {
+            
+            print("App already launched")
+            navigationController  = UINavigationController(rootViewController: menuCoordinator.rootViewController)
+        } else {
+            
+            print("App launched first time")
+            navigationController  = UINavigationController(rootViewController: startCoordinator.rootViewController)
+            defaults.setValue(true, forKey: "isAppAlreadyLaunchedOnce")
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
