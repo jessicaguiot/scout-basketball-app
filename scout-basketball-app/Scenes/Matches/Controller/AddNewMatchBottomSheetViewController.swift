@@ -65,10 +65,10 @@ class AddNewMatchBottomSheetViewController: UIViewController {
         
         matchesBottomSheetContentView.bottomSheetGoUp()
         
-        if let userInfo = sender.userInfo {
-            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
-            print(keyboardRectangle?.height ?? 0)
-        }
+//        if let userInfo = sender.userInfo {
+//            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+//            print(keyboardRectangle?.height ?? 0)
+//        }
     }
     
     @objc func keyboardWillHide(sender: NSNotification) {

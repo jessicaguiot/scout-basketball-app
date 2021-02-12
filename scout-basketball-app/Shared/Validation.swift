@@ -29,7 +29,7 @@ enum ValidationType {
 enum RegEx: String {
     
     case alphabeticStringWithSpace = "^[a-zA-Z ]*$"
-    case number = "[0-9]{2-4}"
+    case number = "^[0-9]*$"
 }
 
 enum AlertMessages: String {
