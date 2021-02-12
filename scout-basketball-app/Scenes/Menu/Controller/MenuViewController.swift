@@ -40,8 +40,11 @@ class MenuViewController: UIViewController {
     private func setup() {
         
         self.view = menuContentView
+        self.navigationController?.navigationBar.isHidden = false
         self.setupNavigationBar(titleScreen: "Menu Time")
         setupMenuTableView()
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.leftBarButtonItem = nil
     }
 
 }
@@ -72,7 +75,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let cellSelected = tableView.cellForRow(at: indexPath) as? MenuTableViewCell {
+        if let _ = tableView.cellForRow(at: indexPath) as? MenuTableViewCell {
             
             switch indexPath.row {
             
@@ -85,16 +88,25 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             default:
                 break
             }
-        
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension UIViewController  {
     
     func setupNavigationBar(titleScreen: String) {
-        
+    
         self.navigationItem.title = titleScreen
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        
+        self.navigationItem.standardAppearance = appearance
+        self.navigationItem.compactAppearance = appearance
+        self.navigationItem.scrollEdgeAppearance = appearance
     }
 }

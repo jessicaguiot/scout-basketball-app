@@ -14,28 +14,28 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
     let userTeamNameLabel: UILabel = {
         
         let label = UILabel()
-        label.text = "UFC"
-        label.font = UIFont(name: "SF Pro Text", size: 15)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
     let opponentTeamNameLabel: UILabel = {
         
         let label = UILabel()
-        label.text = "Unifor"
-        label.font = UIFont(name: "SF Pro Text", size: 15)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
     let totalPointsUserTeamNameLabel: UILabel = {
         
         let label = UILabel()
-        label.text = "33"
         label.textAlignment = .right
-        label.font = UIFont(name: "SF Pro Text", size: 15)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
@@ -44,8 +44,9 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
         let label = UILabel()
         label.text = "40"
         label.textAlignment = .right
-        label.font = UIFont(name: "SF Pro Text", size: 15)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
@@ -79,7 +80,7 @@ class MatchesTableViewCell: UITableViewCell, ViewCode {
             
             userTeamNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             userTeamNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            userTeamNameLabel.widthAnchor.constraint(equalToConstant: 80),
+            userTeamNameLabel.widthAnchor.constraint(equalToConstant: 150),
             userTeamNameLabel.heightAnchor.constraint(equalToConstant: 25),
             
             opponentTeamNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),

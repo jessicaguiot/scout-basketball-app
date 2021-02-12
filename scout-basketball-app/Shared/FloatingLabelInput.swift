@@ -46,6 +46,7 @@ class FloatingLabelInput: UITextField {
         self.placeholder = self._placeholder
         
         self.floatingLabel = UILabel(frame: CGRect.zero)
+        self.textColor = .black
         
         self.addTarget(self, action: #selector(addFloatingLabel), for: .editingDidBegin)
         self.addTarget(self, action: #selector(removeFloatingLabel), for: .editingDidEnd)

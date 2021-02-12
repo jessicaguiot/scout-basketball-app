@@ -39,7 +39,7 @@ class AddNewMatchBottomSheetViewController: UIViewController {
     private func addTapGestureRecognizer() {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideBottomSheetTapGesture))
-        matchesBottomSheetContentView.blurView.addGestureRecognizer(tapGestureRecognizer)
+        matchesBottomSheetContentView.matchblurView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     private func setupKeybordNotifications() {
@@ -49,6 +49,7 @@ class AddNewMatchBottomSheetViewController: UIViewController {
         
         notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+
     
     @objc func hideBottomSheetTapGesture() {
         
@@ -61,8 +62,13 @@ class AddNewMatchBottomSheetViewController: UIViewController {
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
- 
+        
         matchesBottomSheetContentView.bottomSheetGoUp()
+        
+        if let userInfo = sender.userInfo {
+            let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+            print(keyboardRectangle?.height ?? 0)
+        }
     }
     
     @objc func keyboardWillHide(sender: NSNotification) {
@@ -70,7 +76,7 @@ class AddNewMatchBottomSheetViewController: UIViewController {
         matchesBottomSheetContentView.bottomSheetGoDown()
     }
     
-    private func hideBottomSheetView() {
+    public func hideBottomSheetView() {
         
         dismiss(animated: true) {
             self.delegate?.bottomSheetDismiss()
@@ -82,12 +88,13 @@ class AddNewMatchBottomSheetViewController: UIViewController {
         
         if present {
             
-            matchesBottomSheetContentView.blurView.isHidden  = false
-            matchesBottomSheetContentView.blurView.isUserInteractionEnabled = true
+            matchesBottomSheetContentView.matchblurView.isHidden  = false
+            matchesBottomSheetContentView.matchblurView.isUserInteractionEnabled = true
         } else {
             
-            matchesBottomSheetContentView.blurView.isHidden  = true
-            matchesBottomSheetContentView.blurView.isUserInteractionEnabled = false
+            matchesBottomSheetContentView.matchblurView.isHidden  = true
+            matchesBottomSheetContentView.matchblurView.isUserInteractionEnabled = false
         }
     }
 }
+

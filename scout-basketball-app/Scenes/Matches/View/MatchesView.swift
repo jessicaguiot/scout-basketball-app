@@ -14,6 +14,7 @@ class MatchesView: UIView, ViewCode {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = 60
+        tableView.backgroundColor = .white
         return tableView
     }()
     

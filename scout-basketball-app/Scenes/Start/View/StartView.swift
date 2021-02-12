@@ -13,17 +13,19 @@ class StartView: UIView, ViewCode {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "SF Pro Text", size: 25)
-        label.text = "Digite o nome do seu time"
+        label.font = UIFont.systemFont(ofSize: 25, weight: .regular)
+        label.textColor = .black
+        label.text = "Basquete Scout"
         return label
     }()
     
-    let teamNameTextField: UITextField = {
+    let teamNameTextField: FloatingLabelInput = {
         
-        let textField = UITextField()
+        let textField = FloatingLabelInput()
+        textField._placeholder = "Nome do seu time"
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .none
-        textField.setBottomLine()
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor.lightGray.cgColor
         return textField
     }()
     
@@ -34,6 +36,16 @@ class StartView: UIView, ViewCode {
         button.setTitle("Continuar", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         return button
+    }()
+    
+    let errorMessageLabel: UILabel = {
+        
+        let label = UILabel()
+        label.textColor = .systemRed
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
 
     override init(frame: CGRect) {
@@ -56,6 +68,7 @@ class StartView: UIView, ViewCode {
         addSubview(teamNameLabel)
         addSubview(teamNameTextField)
         addSubview(continueButton)
+        addSubview(errorMessageLabel)
     }
     
     func setupViewElementsConstraints() {
@@ -74,7 +87,11 @@ class StartView: UIView, ViewCode {
             continueButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             continueButton.topAnchor.constraint(equalTo: teamNameTextField.bottomAnchor, constant: 40),
             continueButton.heightAnchor.constraint(equalToConstant: 40),
-        
+            
+            errorMessageLabel.heightAnchor.constraint(equalToConstant: 15),
+            errorMessageLabel.topAnchor.constraint(equalTo: teamNameTextField.bottomAnchor, constant: 10),
+            errorMessageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            errorMessageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
         ])
     }
 }

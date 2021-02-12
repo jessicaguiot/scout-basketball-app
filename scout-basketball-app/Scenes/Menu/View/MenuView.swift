@@ -13,6 +13,7 @@ class MenuView: UIView, ViewCode {
         
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
         return tableView
     }()
     

@@ -28,7 +28,6 @@ class PlayersViewController: UIViewController {
         
         super.viewDidLoad()
         setup()
-        
     }
     
     init(viewModel: PlayersViewModel) {
@@ -97,21 +96,22 @@ class PlayersViewController: UIViewController {
         guard let name = addPlayersViewController.playersBottomSheetContentView.playerNameTextField.text else { return }
         
         guard let numeration = Int64(addPlayersViewController.playersBottomSheetContentView.playerNumberTextField.text ?? "0") else { return }
-        print(numeration)
         
         guard let position = addPlayersViewController.playersBottomSheetContentView.playerPositionTextField.text else
             { return }
         
-        print(position)
+        let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, name), (ValidationType.number, String(numeration)), (ValidationType.alphabeticStringWithSpace, position))
         
-        print(isFirstString)
-        
-        if playersViewModel.createPlayer(name: name, isFirstString: isFirstString, numeration: Int(numeration), position: position) != nil{
-            fetchPlayers()
-            print("SUCESS SAVING")
+        switch responseValidation {
+        case .sucess:
+            if playersViewModel.createPlayer(name: name, isFirstString: isFirstString, numeration: Int(numeration), position: position) != nil{
+                fetchPlayers()
+            }
+            addPlayersViewController.hidePlayerBottomSheet()
+        case .failure(_, let message):
+            
+            print(message.localized())
         }
-        
-        addPlayersViewController.hidePlayerBottomSheet()
     }
 }
 
@@ -140,5 +140,24 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.playerNumberLabel.text = String(player?.numeration ?? 0)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completionHandler) in
+            
+            tableView.beginUpdates()
+            
+            guard let playerToDelete = players?[indexPath.row] else { return }
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            playersViewModel.deletePlayer(player: playerToDelete)
+            
+            fetchPlayers()
+            
+            tableView.endUpdates()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

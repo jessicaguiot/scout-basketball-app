@@ -14,6 +14,7 @@ class NBAMatchesView: UIView, ViewCode {
         let tableView = UITableView()
         tableView.rowHeight = 95
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
         return tableView
     }()
     

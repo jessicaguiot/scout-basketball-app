@@ -19,7 +19,7 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
         return view
     }()
     
-    lazy var blurView: UIVisualEffectView = {
+    lazy var matchblurView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialLight)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = self.frame
@@ -28,23 +28,35 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
         blurView.translatesAutoresizingMaskIntoConstraints = false
         return blurView
     }()
+
     
-    let opponentTeamLabel: UILabel = {
-        
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "SF Pro Text", size: 12)
-        label.text = "Time Oponente"
-        return label
+    let opponentTeamTextField: FloatingLabelInput = {
+        let textField = FloatingLabelInput()
+        textField._placeholder = "Nome Time Adversário"
+        textField.placeholder = "Nome Time Adversário"
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        return textField
     }()
     
-    let opponentTeamTextField: UITextField = {
-        
-        let textField = UITextField()
+    let opponentTeamPointsTextField: FloatingLabelInput = {
+        let textField = FloatingLabelInput()
+        textField._placeholder = "Pontos Marcados pelo Time Adversário"
+        textField.placeholder = "Pontos Marcados pelo Time Adversário"
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .none
-        textField.placeholder = "Escreva aqui o nome..."
-        textField.setBottomLine()
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        return textField
+    }()
+    
+    let userTeamPointsTextField: FloatingLabelInput = {
+        let textField = FloatingLabelInput()
+        textField._placeholder = "Pontos marcados pelo seu time"
+        textField.placeholder = "Pontos marcados pelo seu time"
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor.lightGray.cgColor
         return textField
     }()
     
@@ -64,6 +76,16 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
         button.setTitle("Cancelar", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         return button
+    }()
+    
+    let errorMessageLabel: UILabel = {
+        
+        let label = UILabel()
+        label.textColor = .systemRed
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     weak var bottomSheetHeightAnchorConstraint: NSLayoutConstraint?
@@ -91,30 +113,32 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
     
     func setupViewElementsHierarchy() {
         
-        insertSubview(blurView, at: 0)
+        insertSubview(matchblurView, at: 0)
         addSubview(bottomSheet)
         addSubview(doneButton)
         addSubview(cancelButton)
-        addSubview(opponentTeamLabel)
         addSubview(opponentTeamTextField)
+        addSubview(userTeamPointsTextField)
+        addSubview(opponentTeamPointsTextField)
+        addSubview(errorMessageLabel)
     }
     
     func setupBottomSheetHeightAnchor() {
         
-        bottomSheetHeightAnchorConstraint  = bottomSheet.heightAnchor.constraint(equalToConstant: 190)
+        bottomSheetHeightAnchorConstraint  = bottomSheet.heightAnchor.constraint(equalToConstant: 250)
         bottomSheetHeightAnchorConstraint?.isActive = true
     }
     
     func bottomSheetGoUp(){
         
-        bottomSheetHeightAnchorConstraint?.constant = 400
-        blurView.isUserInteractionEnabled = false
+        bottomSheetHeightAnchorConstraint?.constant = 250+346
+        matchblurView.isUserInteractionEnabled = false
     }
     
     func bottomSheetGoDown() {
         
-        bottomSheetHeightAnchorConstraint?.constant = 190
-        blurView.isUserInteractionEnabled = true
+        bottomSheetHeightAnchorConstraint?.constant = 250
+        matchblurView.isUserInteractionEnabled = true
     }
     
     private func setupDismissKeyboardTapGesture() {
@@ -137,8 +161,8 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
             bottomSheet.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             bottomSheet.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
-            blurView.widthAnchor.constraint(equalTo: self.widthAnchor),
+            matchblurView.heightAnchor.constraint(equalTo: self.heightAnchor),
+            matchblurView.widthAnchor.constraint(equalTo: self.widthAnchor),
             
             cancelButton.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 20),
             cancelButton.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 20),
@@ -150,15 +174,26 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
             doneButton.widthAnchor.constraint(equalToConstant: 80),
             doneButton.heightAnchor.constraint(equalToConstant: 5),
             
-            opponentTeamLabel.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
-            opponentTeamLabel.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 60),
-            opponentTeamLabel.trailingAnchor.constraint(equalTo: bottomSheet.trailingAnchor, constant: 15),
-            opponentTeamLabel.heightAnchor.constraint(equalToConstant: 20),
+            errorMessageLabel.heightAnchor.constraint(equalToConstant: 15),
+            errorMessageLabel.widthAnchor.constraint(equalToConstant: 100),
+            errorMessageLabel.centerXAnchor.constraint(equalTo: bottomSheet.centerXAnchor),
+            errorMessageLabel.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 60),
             
             opponentTeamTextField.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
-            opponentTeamTextField.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 90),
+            opponentTeamTextField.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 70),
             opponentTeamTextField.widthAnchor.constraint(equalToConstant: 270),
-            opponentTeamTextField.heightAnchor.constraint(equalToConstant: 20)
+            opponentTeamTextField.heightAnchor.constraint(equalToConstant: 35),
+            
+            userTeamPointsTextField.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
+            userTeamPointsTextField.topAnchor.constraint(equalTo: opponentTeamTextField.bottomAnchor, constant: 23),
+            userTeamPointsTextField.widthAnchor.constraint(equalToConstant: 270),
+            userTeamPointsTextField.heightAnchor.constraint(equalToConstant: 35),
+            
+            opponentTeamPointsTextField.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
+            opponentTeamPointsTextField.topAnchor.constraint(equalTo: userTeamPointsTextField.bottomAnchor, constant: 23),
+            opponentTeamPointsTextField.widthAnchor.constraint(equalToConstant: 270),
+            opponentTeamPointsTextField.heightAnchor.constraint(equalToConstant: 35)
+            
         ])
     }
 }

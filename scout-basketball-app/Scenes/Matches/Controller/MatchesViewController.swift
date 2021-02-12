@@ -15,6 +15,12 @@ class MatchesViewController: UIViewController {
     var matchesContentView = MatchesView()
     
     let addNewMatchBottomSheetViewController = AddNewMatchBottomSheetViewController()
+        
+    let startViewCoordinator = StartCoordinator()
+    
+    var matches: [Match]?
+    
+    var userNameLabel: String?
     
     override func viewDidLoad() {
         
@@ -36,10 +42,19 @@ class MatchesViewController: UIViewController {
     private func setup() {
         
         self.view = matchesContentView
+        userNameLabel = startViewCoordinator.startViewController.startViewModel.getTeamName()
         self.setupNavigationBar(titleScreen: "Partidas")
         setAddNewMatchNavButton()
         setupBottomSheetView()
         setupMatchesTableView()
+        fetchMatches()
+        setupSaveButton()
+    }
+    
+    func fetchMatches() {
+        
+        matches = matchesViewModel.fetchAllPlayers()
+        matchesContentView.matchesTableView.reloadData()
     }
     
     private func setupBottomSheetView() {
@@ -52,14 +67,45 @@ class MatchesViewController: UIViewController {
         let addNewMatchButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddNewMatchModal))
         self.navigationItem.rightBarButtonItem = addNewMatchButton
     }
-
+    
+    private func setupSaveButton() {
+        
+        addNewMatchBottomSheetViewController.matchesBottomSheetContentView.doneButton.addTarget(self, action: #selector(createNewMatch), for: .touchUpInside)
+    }
     
     @objc func showAddNewMatchModal() {
         
         self.present(addNewMatchBottomSheetViewController, animated: true, completion: nil)
         addNewMatchBottomSheetViewController.presentBlurView(true)
     }
-
+    
+    @objc func createNewMatch() {
+        
+        guard let opponentName = addNewMatchBottomSheetViewController.matchesBottomSheetContentView.opponentTeamTextField.text else { return }
+        
+        guard let opponentPoints = Int(addNewMatchBottomSheetViewController.matchesBottomSheetContentView.opponentTeamPointsTextField.text ?? "0") else { return }
+        
+        guard let userTeamPoints = Int(addNewMatchBottomSheetViewController.matchesBottomSheetContentView.userTeamPointsTextField.text ?? "0") else { return }
+        
+        let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, opponentName), (ValidationType.number, String(opponentPoints)), (ValidationType.number, String(userTeamPoints)))
+        
+        switch responseValidation {
+        case .sucess:
+            if matchesViewModel.createMatch(opponentName: opponentName, opponentPoints: opponentPoints, userPoints: userTeamPoints) != nil {
+                
+                addNewMatchBottomSheetViewController.matchesBottomSheetContentView.opponentTeamTextField.text = ""
+                addNewMatchBottomSheetViewController.matchesBottomSheetContentView.opponentTeamPointsTextField.text = ""
+                addNewMatchBottomSheetViewController.matchesBottomSheetContentView.userTeamPointsTextField.text = ""
+                
+                fetchMatches()
+            }
+            
+            addNewMatchBottomSheetViewController.hideBottomSheetView()
+        case .failure(_, let message):
+            
+            print(message.localized())
+        }
+    }
 }
 
 extension MatchesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -72,7 +118,7 @@ extension MatchesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return matches?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,6 +127,32 @@ extension MatchesViewController: UITableViewDelegate, UITableViewDataSource {
             return MatchesTableViewCell()
         }
         
+        let match = matches?[indexPath.row]
+        
+        cell.opponentTeamNameLabel.text = match?.opponentTeamName
+        cell.totalPointsOpponentTeamNameLabel.text = String(match?.opponentPoints ?? 0)
+        cell.totalPointsUserTeamNameLabel.text = String(match?.userTeamPoints ?? 0)
+        cell.userTeamNameLabel.text = userNameLabel
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [self] (action, view, completionHandler) in
+            
+            tableView.beginUpdates()
+            
+            guard let matchToDelete = matches?[indexPath.row] else { return }
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            matchesViewModel.deleteMatch(match: matchToDelete)
+            
+            fetchMatches()
+            
+            tableView.endUpdates()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

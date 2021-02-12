@@ -15,7 +15,7 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
         
         let label = UILabel()
         label.text = "Alexandrina Andrade"
-        label.font = UIFont(name: "SF Pro Text", size: 15)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -24,7 +24,7 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
         
         let label = UILabel()
         label.text = "26"
-        label.font = UIFont(name: "SF Pro Text", size: 15)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

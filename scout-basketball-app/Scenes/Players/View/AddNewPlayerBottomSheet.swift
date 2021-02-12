@@ -158,7 +158,7 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
     
     public func setBottomSheetUp() {
         
-        bottomSheetHeightAnchorConstraint?.constant = 430
+        bottomSheetHeightAnchorConstraint?.constant = bottomSheetHeightAnchor+346
         blurView.isUserInteractionEnabled = false
     }
     
