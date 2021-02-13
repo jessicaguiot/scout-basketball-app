@@ -45,11 +45,5 @@ class DataService {
                 completion(matches, nil)
             }
         }
-        
-//        AF.request(url, parameters: parameters, headers: headers).responseJSON { response in
-//
-//            debugPrint(response)
-//
-//        }
     }
 }

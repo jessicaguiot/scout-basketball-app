@@ -56,6 +56,7 @@ class StartViewController: UIViewController {
         case .failure(_, let message):
             
             print(message.localized())
+            startContentView.teamNameTextField.setError(with: message.localized())
         }
     }
 }

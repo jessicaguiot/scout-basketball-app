@@ -16,15 +16,16 @@ class FloatingLabelInput: UITextField {
     var _placeholder: String?
     
     @IBInspectable
-    var floatingLabelColor: UIColor = .black {
+    var floatingLabelColor: UIColor = .white {
         didSet {
             self.floatingLabel.textColor = floatingLabelColor
             self.setNeedsDisplay()
         }
     }
+
     
     @IBInspectable
-    var activeBorderColor: UIColor = .blue
+    var activeBorderColor: UIColor = .actionColor
     
     @IBInspectable
     var floatingLabelFont = UIFont(name: "SF Pro Text", size: 5) {
@@ -43,10 +44,14 @@ class FloatingLabelInput: UITextField {
         
         self._placeholder = (self._placeholder != nil) ? self._placeholder : self.placeholder
         
+        
+        self.attributedPlaceholder = NSAttributedString(string: self._placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.cgColor])
+        
         self.placeholder = self._placeholder
         
+        
         self.floatingLabel = UILabel(frame: CGRect.zero)
-        self.textColor = .black
+        self.textColor = .white
         
         self.addTarget(self, action: #selector(addFloatingLabel), for: .editingDidBegin)
         self.addTarget(self, action: #selector(removeFloatingLabel), for: .editingDidEnd)
@@ -61,10 +66,10 @@ class FloatingLabelInput: UITextField {
         
         if self.text == "" {
         
-            self.floatingLabelColor = .systemBlue
+            self.floatingLabelColor = .actionColor
             self.floatingLabel.font = floatingLabelFont
             self.floatingLabel.text = self._placeholder
-            self.floatingLabel.layer.backgroundColor = UIColor.white.cgColor
+            self.floatingLabel.layer.backgroundColor = UIColor.black.cgColor
             self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
             self.layer.borderColor = self.activeBorderColor.cgColor
             self.floatingLabel.clipsToBounds = true
@@ -78,7 +83,7 @@ class FloatingLabelInput: UITextField {
             self.placeholder = ""
         }
         
-        self.floatingLabelColor = .systemBlue
+        self.floatingLabelColor = .actionColor
         self.layer.borderColor = self.activeBorderColor.cgColor
         self.bringSubviewToFront(subviews.last!)
         self.setNeedsDisplay()
@@ -99,7 +104,26 @@ class FloatingLabelInput: UITextField {
             self.placeholder = self._placeholder
         }
         
-        self.layer.borderColor = UIColor.black.cgColor
-        self.floatingLabelColor = .gray
+        self.layer.borderColor = UIColor.white.cgColor
+        self.floatingLabelColor = .white
+    }
+    
+    func setError(with message: String) {
+        
+        UIView.animate(withDuration: 5, animations: {
+
+            self.floatingLabel.text = message.uppercased()
+            self.floatingLabel.textColor = .red
+            self.layer.borderColor = UIColor.red.cgColor
+            self.textColor = .red
+            self.tintColor = .red
+        }, completion: {  _ in
+            
+            self.floatingLabelColor = .actionColor
+            self.floatingLabel.text = self._placeholder
+            self.layer.borderColor = self.activeBorderColor.cgColor
+            self.textColor = .white
+            self.tintColor = .actionColor
+        })
     }
 }

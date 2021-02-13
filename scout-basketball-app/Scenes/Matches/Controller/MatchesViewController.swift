@@ -87,7 +87,7 @@ class MatchesViewController: UIViewController {
         
         guard let userTeamPoints = Int(addNewMatchBottomSheetViewController.matchesBottomSheetContentView.userTeamPointsTextField.text ?? "0") else { return }
         
-        let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, opponentName), (ValidationType.number, String(opponentPoints)), (ValidationType.number, String(userTeamPoints)))
+        let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, opponentName))
         
         switch responseValidation {
         case .sucess:
@@ -103,7 +103,7 @@ class MatchesViewController: UIViewController {
             addNewMatchBottomSheetViewController.hideBottomSheetView()
         case .failure(_, let message):
             
-            print(message.localized())
+            addNewMatchBottomSheetViewController.matchesBottomSheetContentView.opponentTeamTextField.setError(with: message.localized())
         }
     }
 }

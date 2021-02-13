@@ -37,8 +37,8 @@ enum AlertMessages: String {
     case inValidAlphabeticString = "Nome Inválido"
     case inValidNumber = "Número Inválido"
     
-    case emptyAlphabeticString = "Campo vazio!"
-    case emptyNumber = "Campo vazio! Preencha todos os campos."
+    case emptyAlphabeticString = "Campo vazio"
+    case emptyNumber = "Campo vazio. Preencha todos os campos."
     
     func localized() -> String {
         
@@ -67,7 +67,6 @@ class Validation: NSObject {
                     return tempValue
                 }
             }
-
         }
         
         return .sucess

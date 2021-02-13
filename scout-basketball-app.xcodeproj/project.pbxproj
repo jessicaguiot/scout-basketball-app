@@ -37,6 +37,9 @@
 		D83C944325D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C944225D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift */; };
 		D83C944B25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C944A25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift */; };
 		D83C945025D4473400E36CD0 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C944F25D4473400E36CD0 /* MatchesTableViewCell.swift */; };
+		D8A01E0C25D8130A00505C1A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A01E0B25D8130A00505C1A /* UIColorExtension.swift */; };
+		D8A01E1425D818E900505C1A /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A01E1325D818E900505C1A /* UITextFieldExtension.swift */; };
+		D8A01E1C25D8251900505C1A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A01E1B25D8251900505C1A /* UIViewControllerExtension.swift */; };
 		D8AB28CC25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28CB25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift */; };
 		D8AB28D125D2BAD000DD6B20 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28D025D2BAD000DD6B20 /* DataServiceTests.swift */; };
 		D8AB28DF25D2C2EE00DD6B20 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */; };
@@ -118,6 +121,9 @@
 		D83C944225D41E2F00E36CD0 /* AddNewMatchBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMatchBottomSheetView.swift; sourceTree = "<group>"; };
 		D83C944A25D421E600E36CD0 /* AddNewMatchBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMatchBottomSheetViewController.swift; sourceTree = "<group>"; };
 		D83C944F25D4473400E36CD0 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
+		D8A01E0B25D8130A00505C1A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D8A01E1325D818E900505C1A /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		D8A01E1B25D8251900505C1A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		D8AB28CB25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAMatchesViewModelTests.swift; sourceTree = "<group>"; };
 		D8AB28D025D2BAD000DD6B20 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		D8AB28DE25D2C2EE00DD6B20 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
@@ -347,6 +353,9 @@
 			children = (
 				D82E768825D5652D00FEC366 /* FloatingLabelInput.swift */,
 				D82E772F25D6C1A600FEC366 /* Validation.swift */,
+				D8A01E0B25D8130A00505C1A /* UIColorExtension.swift */,
+				D8A01E1325D818E900505C1A /* UITextFieldExtension.swift */,
+				D8A01E1B25D8251900505C1A /* UIViewControllerExtension.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -822,6 +831,7 @@
 				D82E76EF25D5EC9C00FEC366 /* UserTeam+CoreDataClass.swift in Sources */,
 				D82E766E25D550BD00FEC366 /* PlayersTableViewCell.swift in Sources */,
 				D82E767325D554F900FEC366 /* AddNewPlayerBottomSheet.swift in Sources */,
+				D8A01E1C25D8251900505C1A /* UIViewControllerExtension.swift in Sources */,
 				D82E768925D5652D00FEC366 /* FloatingLabelInput.swift in Sources */,
 				D83C943E25D3FE2C00E36CD0 /* MenuTableViewCell.swift in Sources */,
 				D8299BBA25CD704200DC8B3B /* ViewCode.swift in Sources */,
@@ -831,6 +841,7 @@
 				D8AB292225D2D48700DD6B20 /* MatchesView.swift in Sources */,
 				D8AB290C25D2D2E600DD6B20 /* MenuViewController.swift in Sources */,
 				D8299B7D25CD6E6700DC8B3B /* scout_basketball_app.xcdatamodeld in Sources */,
+				D8A01E0C25D8130A00505C1A /* UIColorExtension.swift in Sources */,
 				D82E76A325D594FD00FEC366 /* Player+CoreDataClass.swift in Sources */,
 				D8299B7325CD6E6700DC8B3B /* AppDelegate.swift in Sources */,
 				D8299B7525CD6E6700DC8B3B /* SceneDelegate.swift in Sources */,
@@ -842,6 +853,7 @@
 				D8AB293E25D2D58100DD6B20 /* PlayersCoordinator.swift in Sources */,
 				D8AB293425D2D54200DD6B20 /* PlayersViewModel.swift in Sources */,
 				D8299BCF25CD724100DC8B3B /* NBAMatchesViewModel.swift in Sources */,
+				D8A01E1425D818E900505C1A /* UITextFieldExtension.swift in Sources */,
 				D8299BD425CD73B500DC8B3B /* NBAMatchesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1015,7 +1027,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2V8P924DLJ;
 				INFOPLIST_FILE = "scout-basketball-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1038,7 +1050,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2V8P924DLJ;
 				INFOPLIST_FILE = "scout-basketball-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

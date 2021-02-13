@@ -13,7 +13,8 @@ class PlayersView: UIView, ViewCode {
         
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .black
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -31,7 +32,7 @@ class PlayersView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
         registerPlayersTableViewCell()
     }
     

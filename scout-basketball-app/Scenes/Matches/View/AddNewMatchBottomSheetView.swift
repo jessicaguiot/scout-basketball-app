@@ -12,7 +12,7 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
     lazy var bottomSheet: UIView = {
         
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         view.layer.cornerRadius = 30
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -31,32 +31,28 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
 
     
     let opponentTeamTextField: FloatingLabelInput = {
+        
         let textField = FloatingLabelInput()
-        textField._placeholder = "Nome Time Adversário"
-        textField.placeholder = "Nome Time Adversário"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField._placeholder = "Nome time oponente"
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
         return textField
     }()
     
     let opponentTeamPointsTextField: FloatingLabelInput = {
+        
         let textField = FloatingLabelInput()
-        textField._placeholder = "Pontos Marcados pelo Time Adversário"
-        textField.placeholder = "Pontos Marcados pelo Time Adversário"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField._placeholder = "Pontuação time oponente"
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
+        textField.keyboardType = .numberPad
         return textField
     }()
     
     let userTeamPointsTextField: FloatingLabelInput = {
+        
         let textField = FloatingLabelInput()
-        textField._placeholder = "Pontos marcados pelo seu time"
-        textField.placeholder = "Pontos marcados pelo seu time"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField._placeholder = "Pontuação do seu time"
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -65,7 +61,7 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Salvar", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.actionColor, for: .normal)
         return button
     }()
     
@@ -74,19 +70,10 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancelar", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.actionColor, for: .normal)
         return button
     }()
-    
-    let errorMessageLabel: UILabel = {
-        
-        let label = UILabel()
-        label.textColor = .systemRed
-        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.isHidden = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+
     
     weak var bottomSheetHeightAnchorConstraint: NSLayoutConstraint?
     weak var bottomSheetHeightAnchorConstraintAfterUpdate: NSLayoutConstraint?
@@ -120,18 +107,17 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
         addSubview(opponentTeamTextField)
         addSubview(userTeamPointsTextField)
         addSubview(opponentTeamPointsTextField)
-        addSubview(errorMessageLabel)
     }
     
     func setupBottomSheetHeightAnchor() {
         
-        bottomSheetHeightAnchorConstraint  = bottomSheet.heightAnchor.constraint(equalToConstant: 250)
+        bottomSheetHeightAnchorConstraint  = bottomSheet.heightAnchor.constraint(equalToConstant: 300)
         bottomSheetHeightAnchorConstraint?.isActive = true
     }
     
     func bottomSheetGoUp(){
         
-        bottomSheetHeightAnchorConstraint?.constant = 250+346
+        bottomSheetHeightAnchorConstraint?.constant = 300+346
         matchblurView.isUserInteractionEnabled = false
     }
     
@@ -174,24 +160,19 @@ class AddNewMatchBottomSheetView: UIView, ViewCode {
             doneButton.widthAnchor.constraint(equalToConstant: 80),
             doneButton.heightAnchor.constraint(equalToConstant: 5),
             
-            errorMessageLabel.heightAnchor.constraint(equalToConstant: 15),
-            errorMessageLabel.widthAnchor.constraint(equalToConstant: 100),
-            errorMessageLabel.centerXAnchor.constraint(equalTo: bottomSheet.centerXAnchor),
-            errorMessageLabel.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 60),
-            
             opponentTeamTextField.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
             opponentTeamTextField.topAnchor.constraint(equalTo: bottomSheet.topAnchor, constant: 70),
-            opponentTeamTextField.widthAnchor.constraint(equalToConstant: 270),
+            opponentTeamTextField.trailingAnchor.constraint(equalTo: bottomSheet.trailingAnchor, constant: -15),
             opponentTeamTextField.heightAnchor.constraint(equalToConstant: 35),
             
             userTeamPointsTextField.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
             userTeamPointsTextField.topAnchor.constraint(equalTo: opponentTeamTextField.bottomAnchor, constant: 23),
-            userTeamPointsTextField.widthAnchor.constraint(equalToConstant: 270),
+            userTeamPointsTextField.trailingAnchor.constraint(equalTo: bottomSheet.trailingAnchor, constant: -15),
             userTeamPointsTextField.heightAnchor.constraint(equalToConstant: 35),
             
             opponentTeamPointsTextField.leadingAnchor.constraint(equalTo: bottomSheet.leadingAnchor, constant: 15),
             opponentTeamPointsTextField.topAnchor.constraint(equalTo: userTeamPointsTextField.bottomAnchor, constant: 23),
-            opponentTeamPointsTextField.widthAnchor.constraint(equalToConstant: 270),
+            opponentTeamPointsTextField.trailingAnchor.constraint(equalTo: bottomSheet.trailingAnchor, constant: -15),
             opponentTeamPointsTextField.heightAnchor.constraint(equalToConstant: 35)
             
         ])

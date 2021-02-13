@@ -100,7 +100,7 @@ class PlayersViewController: UIViewController {
         guard let position = addPlayersViewController.playersBottomSheetContentView.playerPositionTextField.text else
             { return }
         
-        let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, name), (ValidationType.number, String(numeration)), (ValidationType.alphabeticStringWithSpace, position))
+        let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, name))
         
         switch responseValidation {
         case .sucess:
@@ -110,7 +110,7 @@ class PlayersViewController: UIViewController {
             addPlayersViewController.hidePlayerBottomSheet()
         case .failure(_, let message):
             
-            print(message.localized())
+            addPlayersViewController.playersBottomSheetContentView.playerNameTextField.setError(with: message.localized())
         }
     }
 }

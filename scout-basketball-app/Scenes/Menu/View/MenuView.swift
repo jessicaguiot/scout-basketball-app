@@ -13,7 +13,8 @@ class MenuView: UIView, ViewCode {
         
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .black
+        tableView.rowHeight = 120
         return tableView
     }()
     
@@ -30,7 +31,7 @@ class MenuView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
         registerMenuTableViewCell()
     }
     
@@ -43,10 +44,10 @@ class MenuView: UIView, ViewCode {
         
         NSLayoutConstraint.activate([
             
-            menuTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            menuTableView.heightAnchor.constraint(equalToConstant: 350),
             menuTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0),
             menuTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            menuTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
+            menuTableView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
     

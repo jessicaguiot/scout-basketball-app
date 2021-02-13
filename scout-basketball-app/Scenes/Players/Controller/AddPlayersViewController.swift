@@ -95,4 +95,9 @@ class AddPlayersViewController: UIViewController {
 
 extension AddPlayersViewController:  UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+        return true
+    }
 }

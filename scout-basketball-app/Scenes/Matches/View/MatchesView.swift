@@ -13,8 +13,9 @@ class MatchesView: UIView, ViewCode {
        
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = 60
-        tableView.backgroundColor = .white
+        tableView.rowHeight = 90
+        tableView.backgroundColor = .black
+        tableView.separatorStyle = .singleLine
         return tableView
     }()
     
@@ -31,7 +32,7 @@ class MatchesView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
         registerMatchesTableViewCell()
     }
     

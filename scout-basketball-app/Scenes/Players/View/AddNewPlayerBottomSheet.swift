@@ -14,14 +14,15 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
         let pickerView = UIPickerView()
         pickerView.delegate     = self
         pickerView.dataSource   = self
-        pickerView.backgroundColor = .white
+        pickerView.backgroundColor = .black
+        pickerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 346)
         return pickerView
     }()
     
     lazy var playerBottomSheet: UIView = {
         
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         view.layer.cornerRadius = 30
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -44,7 +45,7 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Salvar", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.actionColor, for: .normal)
         return button
     }()
     
@@ -53,28 +54,22 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancelar", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.actionColor, for: .normal)
         return button
     }()
     
     let playerNameTextField: FloatingLabelInput = {
         let textField = FloatingLabelInput()
         textField._placeholder = "Nome"
-        textField.placeholder = "Nome"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
         return textField
     }()
     
     let playerNumberTextField: FloatingLabelInput = {
         let textField = FloatingLabelInput()
         textField._placeholder = "Numeração"
-        textField.placeholder = "Numeração"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        //textField.keyboardType = .numberPad
+        textField.keyboardType = .numberPad
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
         return textField
     }()
     
@@ -82,10 +77,7 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
         
         let textField = FloatingLabelInput()
         textField._placeholder = "Posição"
-        textField.placeholder = "Posição"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
         return textField
     }()
     
@@ -94,7 +86,7 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
     weak var bottomSheetHeightAnchorConstraint: NSLayoutConstraint?
     weak var bottomSheetHeightAnchorConstraintWithKeyboard: NSLayoutConstraint?
     
-    let bottomSheetHeightAnchor: CGFloat = 280
+    let bottomSheetHeightAnchor: CGFloat = 350
     let positionsList = ["ALA", "PIVO", "ARMADORA"]
     let items = ["Titular", "Reserva"]
     
@@ -129,11 +121,13 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
     
     func setupSegmentedControl() {
         
-        segmentedControl = UISegmentedControl(items: items)
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 16, weight: .semibold)]
         
+        segmentedControl = UISegmentedControl(items: items)
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.backgroundColor = .lightGray
-        segmentedControl.selectedSegmentTintColor = .white
+        segmentedControl.backgroundColor = .black
+        segmentedControl.selectedSegmentTintColor = .actionColor
+        segmentedControl.setTitleTextAttributes(attributes, for: .normal)
         segmentedControl.layer.cornerRadius = 5.0
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -191,7 +185,6 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
             blurView.heightAnchor.constraint(equalTo: self.heightAnchor),
             blurView.widthAnchor.constraint(equalTo: self.widthAnchor),
             
-            
             cancelButton.leadingAnchor.constraint(equalTo: playerBottomSheet.leadingAnchor, constant: 20),
             cancelButton.topAnchor.constraint(equalTo: playerBottomSheet.topAnchor, constant: 20),
             cancelButton.widthAnchor.constraint(equalToConstant: 80),
@@ -209,18 +202,18 @@ class AddNewPlayerBottomSheet: UIView, ViewCode {
             
             playerNumberTextField.topAnchor.constraint(equalTo: playerNameTextField.bottomAnchor, constant: 23),
             playerNumberTextField.leadingAnchor.constraint(equalTo: playerBottomSheet.leadingAnchor, constant: 15),
-            playerNumberTextField.trailingAnchor.constraint(equalTo: playerBottomSheet.trailingAnchor, constant: -150),
+            playerNumberTextField.trailingAnchor.constraint(equalTo: playerBottomSheet.trailingAnchor, constant: -15),
             playerNumberTextField.heightAnchor.constraint(equalToConstant: 35),
             
-            playerPositionTextField.topAnchor.constraint(equalTo: playerNameTextField.bottomAnchor, constant: 23),
-            playerPositionTextField.leadingAnchor.constraint(equalTo: playerNumberTextField.trailingAnchor, constant: 0),
+            playerPositionTextField.topAnchor.constraint(equalTo: playerNumberTextField.bottomAnchor, constant: 23),
+            playerPositionTextField.leadingAnchor.constraint(equalTo: playerBottomSheet.leadingAnchor, constant: 15),
             playerPositionTextField.trailingAnchor.constraint(equalTo: playerBottomSheet.trailingAnchor, constant: -15),
             playerPositionTextField.heightAnchor.constraint(equalToConstant: 35),
             
-            segmentedControl.topAnchor.constraint(equalTo: playerPositionTextField.bottomAnchor, constant: 10),
+            segmentedControl.topAnchor.constraint(equalTo: playerPositionTextField.bottomAnchor, constant: 23),
             segmentedControl.leadingAnchor.constraint(equalTo: playerBottomSheet.leadingAnchor, constant: 15),
             segmentedControl.trailingAnchor.constraint(equalTo: playerBottomSheet.trailingAnchor, constant: -15),
-            segmentedControl.heightAnchor.constraint(equalToConstant: 30)
+            segmentedControl.heightAnchor.constraint(equalToConstant: 35)
         ])
     }
 }
@@ -258,13 +251,13 @@ extension AddNewPlayerBottomSheet: UIPickerViewDataSource, UIPickerViewDelegate 
         
         if pickerView.selectedRow(inComponent: component) == row {
             
-            label.textColor = .systemBlue
+            label.textColor = .actionColor
         } else {
             
-            label.textColor = .black
+            label.textColor = .white
         }
             
-        label.font                          = UIFont.systemFont(ofSize: 12)
+        label.font                          = UIFont.systemFont(ofSize: 15)
         label.textAlignment                 = .center
         label.text                          = positionsList[row]
         
@@ -275,8 +268,8 @@ extension AddNewPlayerBottomSheet: UIPickerViewDataSource, UIPickerViewDelegate 
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        toolBar.barTintColor            = .white
-        toolBar.tintColor               = .systemBlue
+        toolBar.barTintColor            = .black
+        toolBar.tintColor               = .actionColor
         toolBar.translatesAutoresizingMaskIntoConstraints = false
         let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismiss))
         toolBar.setItems([button], animated: true)

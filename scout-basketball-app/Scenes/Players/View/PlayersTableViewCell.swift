@@ -14,7 +14,8 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
     let playerNameLabel: UILabel = {
         
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -22,7 +23,8 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
     let playerNumberLabel: UILabel = {
         
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,7 +42,7 @@ class PlayersTableViewCell: UITableViewCell, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
     }
     
     func setupViewElementsHierarchy() {

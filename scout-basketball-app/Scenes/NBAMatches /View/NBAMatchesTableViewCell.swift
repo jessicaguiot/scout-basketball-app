@@ -15,6 +15,9 @@ class NBAMatchesTableViewCell: UITableViewCell, ViewCode {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.textAlignment = .center
+        label.numberOfLines = 0
         label.font = UIFont(name: "SF Pro Text", size: 14)
         return label
     }()
@@ -23,6 +26,9 @@ class NBAMatchesTableViewCell: UITableViewCell, ViewCode {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .white
+        label.numberOfLines = 0
         label.font = UIFont(name: "SF Pro Text", size: 14)
         return label
     }()
@@ -31,7 +37,8 @@ class NBAMatchesTableViewCell: UITableViewCell, ViewCode {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .right
+        label.textAlignment = .center
+        label.textColor = .white
         label.font = UIFont(name: "SF Pro Text", size: 16)
         return label
     }()
@@ -40,7 +47,8 @@ class NBAMatchesTableViewCell: UITableViewCell, ViewCode {
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .right
+        label.textColor = .white
+        label.textAlignment = .center
         label.font = UIFont(name: "SF Pro Text", size: 16)
         return label
     }()
@@ -72,52 +80,60 @@ class NBAMatchesTableViewCell: UITableViewCell, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
     }
     
     func setupViewElementsHierarchy() {
         
+        addSubview(timePlayView)
         addSubview(homeTeamLabel)
         addSubview(awayTeamLabel)
-        addSubview(matchDateLabel)
         addSubview(matchTimeLabel)
         addSubview(homeTeamLogoImageView)
         addSubview(awayTeamLogoImageView)
     }
     
+    let timePlayView: UIView = {
+        
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .actionColor
+        return view
+    }()
+    
     func setupViewElementsConstraints() {
         
         NSLayoutConstraint.activate([
             
-            homeTeamLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 43),
-            homeTeamLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-            homeTeamLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
-            homeTeamLabel.heightAnchor.constraint(equalToConstant: 40),
+            timePlayView.widthAnchor.constraint(equalToConstant: 90),
+            timePlayView.heightAnchor.constraint(equalToConstant: 30),
+            timePlayView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            timePlayView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            awayTeamLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 43),
-            awayTeamLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            awayTeamLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
-            awayTeamLabel.heightAnchor.constraint(equalToConstant: 30),
+            homeTeamLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            homeTeamLabel.topAnchor.constraint(equalTo: homeTeamLogoImageView.bottomAnchor, constant: 5),
+            homeTeamLabel.trailingAnchor.constraint(equalTo: timePlayView.leadingAnchor, constant: -15),
+            homeTeamLabel.heightAnchor.constraint(equalToConstant: 60),
             
-            matchDateLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            matchDateLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            matchDateLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-            matchDateLabel.heightAnchor.constraint(equalToConstant: 30),
+            awayTeamLabel.leadingAnchor.constraint(equalTo: timePlayView.trailingAnchor, constant: 15),
+            awayTeamLabel.topAnchor.constraint(equalTo: awayTeamLogoImageView.bottomAnchor, constant: 5),
+            awayTeamLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            awayTeamLabel.heightAnchor.constraint(equalToConstant: 60),
             
-            matchTimeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
-            matchTimeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            matchTimeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-            matchTimeLabel.heightAnchor.constraint(equalToConstant: 30),
+            matchTimeLabel.centerYAnchor.constraint(equalTo: timePlayView.centerYAnchor),
+            matchTimeLabel.trailingAnchor.constraint(equalTo: timePlayView.trailingAnchor, constant: -15),
+            matchTimeLabel.leadingAnchor.constraint(equalTo: timePlayView.leadingAnchor, constant: 15),
+            matchTimeLabel.heightAnchor.constraint(equalToConstant: 35),
             
-            homeTeamLogoImageView.heightAnchor.constraint(equalToConstant: 30),
-            homeTeamLogoImageView.widthAnchor.constraint(equalToConstant: 30),
+            homeTeamLogoImageView.heightAnchor.constraint(equalToConstant: 45),
+            homeTeamLogoImageView.widthAnchor.constraint(equalToConstant: 45),
             homeTeamLogoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            homeTeamLogoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            homeTeamLogoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
             
-            awayTeamLogoImageView.heightAnchor.constraint(equalToConstant: 30),
-            awayTeamLogoImageView.widthAnchor.constraint(equalToConstant: 30),
-            awayTeamLogoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            awayTeamLogoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10)
+            awayTeamLogoImageView.heightAnchor.constraint(equalToConstant: 45),
+            awayTeamLogoImageView.widthAnchor.constraint(equalToConstant: 45),
+            awayTeamLogoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            awayTeamLogoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60)
         ])
     }
 

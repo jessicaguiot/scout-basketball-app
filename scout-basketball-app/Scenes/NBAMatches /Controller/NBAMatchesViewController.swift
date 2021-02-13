@@ -21,10 +21,6 @@ class NBAMatchesViewController: UIViewController {
     var homeTeamsLogo: [String]?
     var awayTeamsLogo: [String]?
     
-    override func loadView() {
-        
-        
-    }
     
     override func viewDidLoad() {
         
@@ -50,6 +46,10 @@ class NBAMatchesViewController: UIViewController {
         self.setupNavigationBar(titleScreen: "Partidas NBA")
         nbaMatchesContentView.nbaMatchesTableView.delegate = self
         nbaMatchesContentView.nbaMatchesTableView.dataSource = self
+        let day = nbaMatchesViewModel.getTodayDate(dateFormat: "dd")
+        let month = nbaMatchesViewModel.getTodayDate(dateFormat: "MMMM")
+        let weekday = nbaMatchesViewModel.getWeekDay()
+        nbaMatchesContentView.dateLabel.text = "\(weekday), \(day) \(month.capitalizingFirstLetter())"
     }
     
     private func setupDataFromViewModel() {
@@ -86,10 +86,19 @@ extension NBAMatchesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.homeTeamLabel.text = self.namesHomeTeam![indexPath.row]
         cell.awayTeamLabel.text = self.namesAwayTeam![indexPath.row]
         cell.matchTimeLabel.text = self.timesMatch![indexPath.row]
-        cell.matchDateLabel.text = nbaMatchesViewModel.getTodayDate(dateFormat: "dd/MM")
         cell.homeTeamLogoImageView.downloaded(from: self.homeTeamsLogo![indexPath.row])
         cell.awayTeamLogoImageView.downloaded(from: self.awayTeamsLogo![indexPath.row])
         
         return cell
+    }
+}
+
+extension String {
+    
+    func capitalizingFirstLetter() -> String {
+        
+        let first = self.prefix(1).capitalized
+        let other = self.dropFirst()
+        return first + other
     }
 }

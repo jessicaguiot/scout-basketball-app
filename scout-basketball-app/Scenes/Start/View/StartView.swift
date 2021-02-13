@@ -14,8 +14,8 @@ class StartView: UIView, ViewCode {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 25, weight: .regular)
-        label.textColor = .black
-        label.text = "Basquete Scout"
+        label.textColor = .white
+        label.text = "Scout Basquete"
         return label
     }()
     
@@ -23,9 +23,7 @@ class StartView: UIView, ViewCode {
         
         let textField = FloatingLabelInput()
         textField._placeholder = "Nome do seu time"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.setupTextField(placeholder: textField._placeholder ?? "")
         return textField
     }()
     
@@ -34,19 +32,13 @@ class StartView: UIView, ViewCode {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Continuar", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.actionColor, for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.actionColor.cgColor
+        button.layer.cornerRadius = 8
         return button
     }()
     
-    let errorMessageLabel: UILabel = {
-        
-        let label = UILabel()
-        label.textColor = .systemRed
-        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.isHidden = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,7 +52,7 @@ class StartView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
     }
     
     func setupViewElementsHierarchy() {
@@ -68,7 +60,6 @@ class StartView: UIView, ViewCode {
         addSubview(teamNameLabel)
         addSubview(teamNameTextField)
         addSubview(continueButton)
-        addSubview(errorMessageLabel)
     }
     
     func setupViewElementsConstraints() {
@@ -87,11 +78,7 @@ class StartView: UIView, ViewCode {
             continueButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             continueButton.topAnchor.constraint(equalTo: teamNameTextField.bottomAnchor, constant: 40),
             continueButton.heightAnchor.constraint(equalToConstant: 40),
-            
-            errorMessageLabel.heightAnchor.constraint(equalToConstant: 15),
-            errorMessageLabel.topAnchor.constraint(equalTo: teamNameTextField.bottomAnchor, constant: 10),
-            errorMessageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            errorMessageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            continueButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
 }
@@ -99,19 +86,5 @@ class StartView: UIView, ViewCode {
 
 extension UITextField {
     
-    func setBottomLine() {
-        
-        self.clearButtonMode = .whileEditing
-        
-        let bottomLine                                                                                                  = UIView()
-        self.addSubview(bottomLine)
-        bottomLine.translatesAutoresizingMaskIntoConstraints                                                            = false
-        bottomLine.backgroundColor                                                                                      = .black
-        
-        //setup bottom line constraints
-        bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive                                               = true
-        bottomLine.widthAnchor.constraint(equalToConstant: 270).isActive                                                = true
-        bottomLine.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive                                       = true
-        bottomLine.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5).isActive                                         = true
-    }
+    
 }

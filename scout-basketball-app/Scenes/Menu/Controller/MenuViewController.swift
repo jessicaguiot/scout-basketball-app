@@ -15,7 +15,7 @@ class MenuViewController: UIViewController {
     var menuContentView = MenuView()
     
     let screensLabels = [
-        "Suas partidas",
+        "Partidas",
         "Jogadores",
         "Acompanhe a NBA"
     ]
@@ -55,6 +55,9 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         
         menuContentView.menuTableView.delegate = self
         menuContentView.menuTableView.dataSource = self
+        menuContentView.menuTableView.separatorStyle = .none
+        menuContentView.menuTableView.rowHeight = 120
+        menuContentView.menuTableView.backgroundColor = .black
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,6 +80,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         
         if let _ = tableView.cellForRow(at: indexPath) as? MenuTableViewCell {
             
+            
             switch indexPath.row {
             
             case 0:
@@ -94,19 +98,3 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension UIViewController  {
-    
-    func setupNavigationBar(titleScreen: String) {
-    
-        self.navigationItem.title = titleScreen
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-        
-        self.navigationItem.standardAppearance = appearance
-        self.navigationItem.compactAppearance = appearance
-        self.navigationItem.scrollEdgeAppearance = appearance
-    }
-}

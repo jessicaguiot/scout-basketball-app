@@ -70,9 +70,37 @@ class NBAMatchesViewModel {
         
         let date = Date()
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "pt_BR")
         dateFormatter.dateFormat = dateFormat
         let dateString = dateFormatter.string(from: date)
         return dateString
+    }
+    
+    func getWeekDay() -> String {
+        
+        let myCalendar = NSCalendar(calendarIdentifier: .gregorian)
+        let myComponents = myCalendar?.components(.weekday, from: Date())
+        let weekDay = myComponents?.weekday
+        
+        switch weekDay {
+            case 1:
+                return "Domingo"
+            case 2:
+                return "Segunda"
+            case 3:
+                return "Terça"
+            case 4:
+                return "Quarta"
+            case 5:
+                return "Quinta"
+            case 6:
+                return "Sexta"
+            case 7:
+                return "Sábado"
+            default:
+                print("Error fetching days")
+                return "Day"
+        }
     }
 }
 

@@ -12,10 +12,20 @@ class NBAMatchesView: UIView, ViewCode {
     let nbaMatchesTableView: UITableView = {
        
         let tableView = UITableView()
-        tableView.rowHeight = 95
+        tableView.rowHeight = 120
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .black
         return tableView
+    }()
+    
+    let dateLabel: UILabel = {
+        
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        label.textColor = .white
+        label.textAlignment = .center
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -31,12 +41,13 @@ class NBAMatchesView: UIView, ViewCode {
     
     func setupView() {
         
-        self.backgroundColor = .white
+        self.backgroundColor = .black
         setupNBBMatchesTableView()
     }
     
     func setupViewElementsHierarchy() {
         
+        addSubview(dateLabel)
         addSubview(nbaMatchesTableView)
     }
     
@@ -44,7 +55,12 @@ class NBAMatchesView: UIView, ViewCode {
         
         NSLayoutConstraint.activate([
             
-            nbaMatchesTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            dateLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            dateLabel.heightAnchor.constraint(equalToConstant: 50),
+            dateLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            dateLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+            
+            nbaMatchesTableView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 15),
             nbaMatchesTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0),
             nbaMatchesTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0),
             nbaMatchesTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
