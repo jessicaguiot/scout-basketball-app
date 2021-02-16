@@ -40,7 +40,6 @@ class StartViewController: UIViewController {
     
     @objc func createNewTime() {
         
-        
         guard let name = startContentView.teamNameTextField.text else { return }
         
         let responseValidation = Validation.shared.validate(values: (ValidationType.alphabeticStringWithSpace, name))

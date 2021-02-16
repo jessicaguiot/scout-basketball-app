@@ -42,7 +42,7 @@ class MatchesViewController: UIViewController {
     private func setup() {
         
         self.view = matchesContentView
-        userNameLabel = startViewCoordinator.startViewController.startViewModel.getTeamName()
+        userNameLabel = startViewCoordinator.startViewController.startViewModel.getLastTeamName()
         self.setupNavigationBar(titleScreen: "Partidas")
         setAddNewMatchNavButton()
         setupBottomSheetView()
