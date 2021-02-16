@@ -66,9 +66,9 @@ class NBAMatchesViewModel {
         }
     }
     
-    func getTodayDate(dateFormat: String) -> String {
+    func getTodayDate(dateHandler: DateHandler, dateFormat: String) -> String {
         
-        let date = Date()
+        let date = dateHandler.currentDate()
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
         dateFormatter.dateFormat = dateFormat
@@ -76,10 +76,10 @@ class NBAMatchesViewModel {
         return dateString
     }
     
-    func getWeekDay() -> String {
+    func getWeekDay(from date: Date) -> String {
         
         let myCalendar = NSCalendar(calendarIdentifier: .gregorian)
-        let myComponents = myCalendar?.components(.weekday, from: Date())
+        let myComponents = myCalendar?.components(.weekday, from: date)
         let weekDay = myComponents?.weekday
         
         switch weekDay {

@@ -46,9 +46,10 @@ class NBAMatchesViewController: UIViewController {
         self.setupNavigationBar(titleScreen: "Partidas NBA")
         nbaMatchesContentView.nbaMatchesTableView.delegate = self
         nbaMatchesContentView.nbaMatchesTableView.dataSource = self
-        let day = nbaMatchesViewModel.getTodayDate(dateFormat: "dd")
-        let month = nbaMatchesViewModel.getTodayDate(dateFormat: "MMMM")
-        let weekday = nbaMatchesViewModel.getWeekDay()
+        let dateHandler = DateHandler()
+        let day = nbaMatchesViewModel.getTodayDate(dateHandler: dateHandler, dateFormat: "dd")
+        let month = nbaMatchesViewModel.getTodayDate(dateHandler: dateHandler, dateFormat: "MMMM")
+        let weekday = nbaMatchesViewModel.getWeekDay(from: dateHandler.currentDate())
         nbaMatchesContentView.dateLabel.text = "\(weekday), \(day) \(month.capitalizingFirstLetter())"
     }
     

@@ -10,24 +10,26 @@ import XCTest
 
 class DataServiceTests: XCTestCase {
     
+    var dataService: DataService!
     var urlToTest: URL!
     
     override func setUp() {
+        
         super.setUp()
         
-        urlToTest = URL(string: "https://api-basketball.p.rapidapi.com/games")!
+        dataService = DataService()
     }
 
     override func tearDown() {
-        super.tearDown()
         
+        super.tearDown()
         urlToTest = nil
     }
 
     func testGetMatchesSucessReturnsMatches() {
         
-        let dataService = DataService()
         
+        urlToTest = URL(string: "https://api-basketball.p.rapidapi.com/games")!
         let responseExpectation = expectation(description: "ResponseAPI")
         var responseApi: ResponseAPI?
         
@@ -39,6 +41,25 @@ class DataServiceTests: XCTestCase {
         
         waitForExpectations(timeout: 120) { error in
             XCTAssertNotNil(responseApi)
+        }
+    }
+    
+    func testThrownsError() {
+        
+        urlToTest = URL(string: "https://api-basketball.p.rapidapi.com/jogos")!
+        
+        let responseExpectation = expectation(description: "Error")
+        var responseError: Error?
+        
+        dataService.executeRequest(urlToTest) { response, error in
+            
+            responseError = error
+            responseExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 120) { error in
+            
+            XCTAssertNotNil(responseError)
         }
     }
 

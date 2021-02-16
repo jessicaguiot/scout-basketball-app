@@ -14,7 +14,7 @@ enum Alert {
     case error
 }
 
-enum Valid {
+enum Valid: Equatable {
     
     case sucess
     case failure(Alert, AlertMessages)

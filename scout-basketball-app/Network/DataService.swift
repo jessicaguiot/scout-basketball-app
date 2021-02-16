@@ -31,7 +31,7 @@ class DataService {
             "league": "12",
             "season": "2020-2021",
             "timezone": localTimeZoneAbbreviation,
-            "date": NBAMatchesViewModel().getTodayDate(dateFormat: "yyyy-MM-dd")
+            "date": NBAMatchesViewModel().getTodayDate(dateHandler: DateHandler(), dateFormat: "yyyy-MM-dd")
         ]
         
         AF.request(url, parameters: parameters, headers: headers).responseDecodable(of: ResponseAPI.self) { response in

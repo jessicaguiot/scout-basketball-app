@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Match" representedClassName="Match" syncable="YES" codeGenerationType="category">
+    <entity name="Match" representedClassName="Match" syncable="YES">
         <attribute name="opponentPoints" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="opponentTeamName" optional="YES" attributeType="String"/>
         <attribute name="userTeamPoints" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="category">
+    <entity name="Player" representedClassName="Player" syncable="YES">
         <attribute name="isFirstString" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="numeration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="position" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="UserTeam" representedClassName="UserTeam" syncable="YES" codeGenerationType="category">
+    <entity name="UserTeam" representedClassName="UserTeam" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Player" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="Match" positionX="-54" positionY="18" width="128" height="74"/>
+        <element name="Player" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="UserTeam" positionX="-36" positionY="45" width="128" height="44"/>
     </elements>
 </model>

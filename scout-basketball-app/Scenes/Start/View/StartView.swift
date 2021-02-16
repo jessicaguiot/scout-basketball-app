@@ -83,8 +83,3 @@ class StartView: UIView, ViewCode {
     }
 }
 
-
-extension UITextField {
-    
-    
-}

@@ -27,9 +27,14 @@ class StartViewModel {
     
     //MARK: - CRUD: Core Data
     
-    func getTeamName() -> String {
+    func fetchAllTeams(viewContext: NSManagedObjectContext = context) -> [UserTeam] {
+        return UserTeam.fetchTeamName(viewContext: viewContext)
+    }
+    
+    
+    func getLastTeamName(viewContext: NSManagedObjectContext = context) -> String {
         
-        let team = UserTeam.fetchTeamName()
+        let team = fetchAllTeams(viewContext: viewContext)
         return team.last?.name ?? "theres no team here"
     }
     
