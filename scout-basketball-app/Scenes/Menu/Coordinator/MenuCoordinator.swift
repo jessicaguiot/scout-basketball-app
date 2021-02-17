@@ -36,10 +36,7 @@ class MenuCoordinator: Coordinator {
     
     private func showMacthesViewController() {
         
-        //menuViewController.present(matchesCoordinator.rootViewController, animated: true, completion: nil)
-    
-        
-        menuViewController.navigationController?.pushViewController(matchesCoordinator.matchesViewController, animated: true)
+        menuViewController.navigationController?.pushViewController(matchesCoordinator.rootViewController, animated: true)
     }
     
     private func showPlayersViewController() {
@@ -63,6 +60,5 @@ class MenuCoordinator: Coordinator {
         case .nbaMatches:
             showNBAMatchesViewController()
         }
-        
     }
 }

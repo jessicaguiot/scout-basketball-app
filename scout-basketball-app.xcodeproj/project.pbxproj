@@ -40,6 +40,8 @@
 		D8A01E0C25D8130A00505C1A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A01E0B25D8130A00505C1A /* UIColorExtension.swift */; };
 		D8A01E1425D818E900505C1A /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A01E1325D818E900505C1A /* UITextFieldExtension.swift */; };
 		D8A01E1C25D8251900505C1A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A01E1B25D8251900505C1A /* UIViewControllerExtension.swift */; };
+		D8A5E32425DD4E2F00D92FD9 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5E32325DD4E2F00D92FD9 /* MenuViewControllerTests.swift */; };
+		D8A5E32925DD550300D92FD9 /* MenuCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5E32825DD550300D92FD9 /* MenuCoordinatorTests.swift */; };
 		D8A9F37825DBE905009B91E7 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9F37725DBE905009B91E7 /* DateHandler.swift */; };
 		D8A9F38025DC0163009B91E7 /* ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9F37F25DC0163009B91E7 /* ValidationTests.swift */; };
 		D8A9F38525DC1107009B91E7 /* StartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9F38425DC1107009B91E7 /* StartViewModelTests.swift */; };
@@ -134,6 +136,8 @@
 		D8A01E0B25D8130A00505C1A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D8A01E1325D818E900505C1A /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		D8A01E1B25D8251900505C1A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		D8A5E32325DD4E2F00D92FD9 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
+		D8A5E32825DD550300D92FD9 /* MenuCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinatorTests.swift; sourceTree = "<group>"; };
 		D8A9F37725DBE905009B91E7 /* DateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
 		D8A9F37F25DC0163009B91E7 /* ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTests.swift; sourceTree = "<group>"; };
 		D8A9F38425DC1107009B91E7 /* StartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModelTests.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 				D8A9F38425DC1107009B91E7 /* StartViewModelTests.swift */,
 				D8B20F0D25DC8905002568B6 /* MatchesViewModelTests.swift */,
 				D8B20F1525DC8D9A002568B6 /* PlayersViewModelTests.swift */,
+				D8A5E32325DD4E2F00D92FD9 /* MenuViewControllerTests.swift */,
+				D8A5E32825DD550300D92FD9 /* MenuCoordinatorTests.swift */,
 			);
 			path = "scout-basketball-appTests";
 			sourceTree = "<group>";
@@ -894,7 +900,9 @@
 			files = (
 				D8AB28D125D2BAD000DD6B20 /* DataServiceTests.swift in Sources */,
 				D8A9F38925DC1977009B91E7 /* scout_basketball_app.xcdatamodeld in Sources */,
+				D8A5E32925DD550300D92FD9 /* MenuCoordinatorTests.swift in Sources */,
 				D8B20F0E25DC8905002568B6 /* MatchesViewModelTests.swift in Sources */,
+				D8A5E32425DD4E2F00D92FD9 /* MenuViewControllerTests.swift in Sources */,
 				D8AB28CC25D2B65B00DD6B20 /* NBAMatchesViewModelTests.swift in Sources */,
 				D8A9F38525DC1107009B91E7 /* StartViewModelTests.swift in Sources */,
 				D8A9F38025DC0163009B91E7 /* ValidationTests.swift in Sources */,
